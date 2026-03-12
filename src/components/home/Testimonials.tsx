@@ -6,8 +6,8 @@ const testimonials = [
     uni: 'Western Michigan University',
     flag: '🇺🇸',
     avatar: 'MH',
-    color: '#6B1A2E',
-    bg: 'linear-gradient(135deg,#6B1A2E,#8B3A4E)',
+    color: '#7A2035',
+    bg: 'linear-gradient(135deg,#7A2035,#8B3A4E)',
     course: 'MBA — Full Scholarship',
     review:
       'Studying in the U.S. with a full scholarship was once just a dream — StudyEx made it real. Their guidance on my SOP and scholarship application was exceptional. They truly go above and beyond for every single student.',
@@ -19,8 +19,8 @@ const testimonials = [
     uni: 'University of Toronto',
     flag: '🇨🇦',
     avatar: 'NJ',
-    color: '#3D2B1F',
-    bg: 'linear-gradient(135deg,#3D2B1F,#7A4F2D)',
+    color: '#112236',
+    bg: 'linear-gradient(135deg,#112236,#1D3557)',
     course: 'MSc Computer Science',
     review:
       'I was completely lost in the maze of Canadian applications until I found StudyEx. They handled everything — shortlisting, SOP, visa prep. Got in with a scholarship! I cannot thank them enough for changing my life.',
@@ -32,8 +32,8 @@ const testimonials = [
     uni: 'University of Edinburgh',
     flag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
     avatar: 'RH',
-    color: '#1C3A5C',
-    bg: 'linear-gradient(135deg,#1C3A5C,#2D5C8A)',
+    color: '#1A4B7C',
+    bg: 'linear-gradient(135deg,#1A4B7C,#2D5C8A)',
     course: 'MSc Data Science',
     review:
       'StudyEx is the real deal. Professional, caring, and incredibly knowledgeable. They knew exactly which universities would accept my profile and helped me secure a £6,000 scholarship. Best investment I ever made.',
@@ -45,8 +45,8 @@ const testimonials = [
     uni: 'TU Munich',
     flag: '🇩🇪',
     avatar: 'TB',
-    color: '#7A5C44',
-    bg: 'linear-gradient(135deg,#7A5C44,#A87A5A)',
+    color: '#4A6274',
+    bg: 'linear-gradient(135deg,#4A6274,#6D7782)',
     course: 'MSc Mechanical Engineering',
     review:
       'Germany was my dream and StudyEx made it happen in just 6 months. Free public university, DAAD scholarship support, and they even helped me prepare for my language certificate. Absolutely amazing team!',
@@ -58,8 +58,8 @@ const testimonials = [
     uni: 'University of Melbourne',
     flag: '🇦🇺',
     avatar: 'FA',
-    color: '#2D4A2D',
-    bg: 'linear-gradient(135deg,#2D4A2D,#4A5C44)',
+    color: '#182C4A',
+    bg: 'linear-gradient(135deg,#182C4A,#2d4c79)',
     course: 'PhD Biotechnology',
     review:
       'The visa process for Australia scared me but the StudyEx team was calm, professional, and handled every document perfectly. Got my visa in 3 weeks. Now living my absolute dream in Melbourne!',
@@ -71,8 +71,8 @@ const testimonials = [
     uni: 'University College Dublin',
     flag: '🇮🇪',
     avatar: 'SA',
-    color: '#6B1A2E',
-    bg: 'linear-gradient(135deg,#6B1A2E,#A83A2D)',
+    color: '#7A2035',
+    bg: 'linear-gradient(135deg,#7A2035,#a82b48)',
     course: 'MSc Marketing',
     review:
       'StudyEx found me a university AND a scholarship I had no idea existed. They were with me every step — application, visa, pre-departure. I felt genuinely cared for, not just treated as a client.',
@@ -84,8 +84,8 @@ const testimonials = [
     uni: 'Université de Paris',
     flag: '🇫🇷',
     avatar: 'IK',
-    color: '#3D2B1F',
-    bg: 'linear-gradient(135deg,#3D2B1F,#7A4F2D)',
+    color: '#112236',
+    bg: 'linear-gradient(135deg,#112236,#1D3557)',
     course: 'MSc International Relations',
     review:
       'France seemed impossibly far — language barrier, different system, everything. StudyEx guided me through every single step. Their expertise saved me months of confusion and stress. Truly world-class consultancy.',
@@ -97,8 +97,8 @@ const testimonials = [
     uni: 'Massey University',
     flag: '🇳🇿',
     avatar: 'RP',
-    color: '#4A5C44',
-    bg: 'linear-gradient(135deg,#4A5C44,#1C3A5C)',
+    color: '#4A6274',
+    bg: 'linear-gradient(135deg,#4A6274,#6D7782)',
     course: 'MBA Leadership',
     review:
       'New Zealand was not even on my radar until StudyEx showed me the opportunities there. Post-study work visa, beautiful country, world-class university — honestly the best decision of my entire life.',
@@ -188,18 +188,18 @@ export default function Testimonials() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       style={{
-        background: '#F5EDD8',
+        background: '#EDEBE4',
         padding: '80px 0 64px',
         position: 'relative',
         overflow: 'hidden',
-        borderTop: '1px solid rgba(122,79,45,0.12)',
-        borderBottom: '1px solid rgba(122,79,45,0.12)',
+        borderTop: '1px solid rgba(29,53,87,0.12)',
+        borderBottom: '1px solid rgba(29,53,87,0.12)',
       }}
     >
       {/* Vintage diagonal rule */}
       <div style={{
         position: 'absolute', inset: 0,
-        backgroundImage: 'repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(201,168,76,0.02) 41px)',
+        backgroundImage: 'repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(197,168,111,0.02) 41px)',
         pointerEvents: 'none',
       }} />
 
@@ -218,17 +218,17 @@ export default function Testimonials() {
           <h2 style={{
             fontFamily: 'var(--font-heading)', fontStyle: 'italic',
             fontSize: 'clamp(26px, 3.5vw, 44px)',
-            color: '#1C1007', margin: '8px 0 10px', lineHeight: 1.15,
+            color: '#08101E', margin: '8px 0 10px', lineHeight: 1.15,
           }}>
             Real Stories. Real Results.
           </h2>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-            <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.4)' }} />
-            <span style={{ color: '#C9A84C', fontSize: 10 }}>✦</span>
-            <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.4)' }} />
+            <div style={{ width: 40, height: 1, background: 'rgba(197,168,111,0.4)' }} />
+            <span style={{ color: '#C5A86F', fontSize: 10 }}>✦</span>
+            <div style={{ width: 40, height: 1, background: 'rgba(197,168,111,0.4)' }} />
           </div>
           <p style={{
-            color: '#6B5B4B', fontSize: 15, maxWidth: 440, margin: '0 auto',
+            color: '#6D7782', fontSize: 15, maxWidth: 440, margin: '0 auto',
             fontFamily: 'var(--font-body)', fontStyle: 'italic',
           }}>
             Hear straight from students whose lives changed with StudyEx.
@@ -288,20 +288,20 @@ export default function Testimonials() {
               aria-label="Previous testimonial"
               style={{
                 width: 40, height: 40, borderRadius: 0,
-                border: '1px solid rgba(122,79,45,0.25)',
+                border: '1px solid rgba(29,53,87,0.25)',
                 background: 'transparent', cursor: 'pointer',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 20, color: '#7A4F2D',
+                fontSize: 20, color: '#1D3557',
                 transition: 'all 0.25s ease',
                 flexShrink: 0,
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = '#7A4F2D';
-                e.currentTarget.style.color = '#F5EDD8';
+                e.currentTarget.style.background = '#1D3557';
+                e.currentTarget.style.color = '#EDEBE4';
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.background = 'transparent';
-                e.currentTarget.style.color = '#7A4F2D';
+                e.currentTarget.style.color = '#1D3557';
               }}
             >
               ‹
@@ -319,7 +319,7 @@ export default function Testimonials() {
                     style={{
                       width: i === current ? 24 : 6,
                       height: 6, borderRadius: 0,
-                      background: i === current ? '#C9A84C' : 'rgba(122,79,45,0.2)',
+                      background: i === current ? '#C5A86F' : 'rgba(29,53,87,0.2)',
                       border: 'none', cursor: 'pointer', padding: 0,
                       transition: 'all 0.35s cubic-bezier(0.4,0,0.2,1)',
                     }}
@@ -330,11 +330,11 @@ export default function Testimonials() {
               {/* Progress bar */}
               <div style={{
                 width: 120, height: 2, borderRadius: 0,
-                background: 'rgba(122,79,45,0.15)', overflow: 'hidden',
+                background: 'rgba(29,53,87,0.15)', overflow: 'hidden',
               }}>
                 <div style={{
                   height: '100%', borderRadius: 0,
-                  background: '#C9A84C',
+                  background: '#C5A86F',
                   width: `${paused ? progress : progress}%`,
                   transition: paused ? 'none' : 'width 0.03s linear',
                 }} />
@@ -347,20 +347,20 @@ export default function Testimonials() {
               aria-label="Next testimonial"
               style={{
                 width: 40, height: 40, borderRadius: 0,
-                border: '1px solid rgba(122,79,45,0.25)',
+                border: '1px solid rgba(29,53,87,0.25)',
                 background: 'transparent', cursor: 'pointer',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 20, color: '#7A4F2D',
+                fontSize: 20, color: '#1D3557',
                 transition: 'all 0.25s ease',
                 flexShrink: 0,
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = '#7A4F2D';
-                e.currentTarget.style.color = '#F5EDD8';
+                e.currentTarget.style.background = '#1D3557';
+                e.currentTarget.style.color = '#EDEBE4';
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.background = 'transparent';
-                e.currentTarget.style.color = '#7A4F2D';
+                e.currentTarget.style.color = '#1D3557';
               }}
             >
               ›
@@ -433,9 +433,9 @@ function SlideCard({
       ...style,
       borderRadius: 0,
       overflow: 'hidden',
-      boxShadow: '0 4px 24px rgba(28,16,7,0.12)',
-      border: '1px solid rgba(122,79,45,0.2)',
-      background: '#FDF6E3',
+      boxShadow: '0 4px 24px rgba(6,11,18,0.12)',
+      border: '1px solid rgba(29,53,87,0.2)',
+      background: '#F5F4F0',
       display: 'flex',
       flexWrap: 'wrap',
       minHeight: 300,
@@ -514,19 +514,19 @@ function SlideCard({
         flexDirection: 'column',
         justifyContent: 'center',
         minWidth: 260,
-        background: '#FDF6E3',
+        background: '#F5F4F0',
       }}>
         {/* Stars */}
         <div style={{ display: 'flex', gap: 4, marginBottom: 20 }}>
           {[...Array(t.stars)].map((_, i) => (
-            <span key={i} style={{ color: '#C9A84C', fontSize: 18 }}>★</span>
+            <span key={i} style={{ color: '#C5A86F', fontSize: 18 }}>★</span>
           ))}
         </div>
 
         {/* Big quote mark */}
         <div style={{
           fontSize: 72, lineHeight: 0.8,
-          color: '#C9A84C', opacity: 0.3,
+          color: '#C5A86F', opacity: 0.3,
           fontFamily: 'Georgia, serif',
           marginBottom: 8,
           userSelect: 'none',
@@ -538,7 +538,7 @@ function SlideCard({
         <p style={{
           fontFamily: 'var(--font-body)',
           fontSize: 'clamp(13px, 1.5vw, 16px)',
-          color: '#3D2B1F',
+          color: '#112236',
           lineHeight: 1.9,
           fontStyle: 'italic',
           margin: 0,
@@ -552,14 +552,14 @@ function SlideCard({
           display: 'flex', alignItems: 'center', gap: 10,
           marginTop: 28,
           paddingTop: 20,
-          borderTop: '1px solid rgba(122,79,45,0.15)',
+          borderTop: '1px solid rgba(29,53,87,0.15)',
         }}>
           <span style={{
             display: 'inline-flex', alignItems: 'center', gap: 5,
-            background: 'rgba(201,168,76,0.1)',
-            border: '1px solid rgba(201,168,76,0.3)',
+            background: 'rgba(197,168,111,0.1)',
+            border: '1px solid rgba(197,168,111,0.3)',
             padding: '4px 12px',
-            fontSize: 10, color: '#7A4F2D',
+            fontSize: 10, color: '#1D3557',
             fontFamily: 'var(--font-label)', fontWeight: 600,
             letterSpacing: '0.08em', textTransform: 'uppercase',
           }}>
@@ -567,7 +567,7 @@ function SlideCard({
           </span>
           <span style={{
             fontFamily: 'var(--font-label)', fontSize: 10,
-            color: '#6B5B4B', letterSpacing: '0.06em', textTransform: 'uppercase',
+            color: '#6D7782', letterSpacing: '0.06em', textTransform: 'uppercase',
           }}>
             via Google Reviews
           </span>

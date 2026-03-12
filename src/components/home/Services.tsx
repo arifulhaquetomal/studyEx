@@ -80,20 +80,20 @@ export default function Services() {
   }, []);
 
   return (
-    <section ref={sectionRef} style={{ background: '#F5EDD8', padding: '96px 0' }}>
+    <section ref={sectionRef} style={{ background: '#EDEBE4', padding: '96px 0' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }}>
         <div style={{ textAlign: 'center', marginBottom: 52 }}>
           <span className="section-label">Our Services</span>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 'clamp(28px, 4vw, 44px)', color: '#1C1007', marginTop: 8, marginBottom: 16 }}>
+          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 'clamp(28px, 4vw, 44px)', color: '#08101E', marginTop: 8, marginBottom: 16 }}>
             Everything You Need to Study Abroad
           </h2>
           {/* Ornamental rule */}
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 12, marginBottom: 16 }}>
-            <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.5)' }} />
-            <span style={{ color: '#C9A84C', fontSize: 12 }}>✦</span>
-            <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.5)' }} />
+            <div style={{ width: 40, height: 1, background: 'rgba(197,168,111,0.5)' }} />
+            <span style={{ color: '#C5A86F', fontSize: 12 }}>✦</span>
+            <div style={{ width: 40, height: 1, background: 'rgba(197,168,111,0.5)' }} />
           </div>
-          <p style={{ color: '#6B5B4B', fontSize: 15, maxWidth: 520, margin: '0 auto', fontStyle: 'italic' }}>
+          <p style={{ color: '#6D7782', fontSize: 15, maxWidth: 520, margin: '0 auto', fontStyle: 'italic' }}>
             From your first consultation to landing at your destination university — we're with you every step.
           </p>
         </div>
@@ -107,30 +107,30 @@ export default function Services() {
             <div key={service.title} className="service-card" style={{ opacity: 0 }}>
               <div style={{
                 fontSize: 22,
-                color: '#C9A84C',
+                color: '#C5A86F',
                 marginBottom: 18,
                 fontFamily: 'serif',
               }}>
                 {service.icon}
               </div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 20, color: '#1C1007', marginBottom: 10 }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 20, color: '#08101E', marginBottom: 10 }}>
                 {service.title}
               </h3>
-              <p style={{ color: '#6B5B4B', fontSize: 14, lineHeight: 1.8, marginBottom: 20 }}>
+              <p style={{ color: '#6D7782', fontSize: 14, lineHeight: 1.8, marginBottom: 20 }}>
                 {service.desc}
               </p>
               <Link
                 to={service.link}
                 style={{
-                  color: '#7A4F2D', fontFamily: 'var(--font-label)', fontWeight: 600, fontSize: 11,
+                  color: '#1D3557', fontFamily: 'var(--font-label)', fontWeight: 600, fontSize: 11,
                   textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6,
                   letterSpacing: '0.1em', textTransform: 'uppercase',
                   transition: 'gap 0.25s ease',
-                  borderBottom: '1px solid rgba(122,79,45,0.3)',
+                  borderBottom: '1px solid rgba(29,53,87,0.3)',
                   paddingBottom: 2,
                 }}
-                onMouseEnter={e => { (e.currentTarget.style.gap = '10px'); (e.currentTarget.style.color = '#C9A84C'); (e.currentTarget.style.borderBottomColor = '#C9A84C'); }}
-                onMouseLeave={e => { (e.currentTarget.style.gap = '6px'); (e.currentTarget.style.color = '#7A4F2D'); (e.currentTarget.style.borderBottomColor = 'rgba(122,79,45,0.3)'); }}
+                onMouseEnter={e => { (e.currentTarget.style.gap = '10px'); (e.currentTarget.style.color = '#C5A86F'); (e.currentTarget.style.borderBottomColor = '#C5A86F'); }}
+                onMouseLeave={e => { (e.currentTarget.style.gap = '6px'); (e.currentTarget.style.color = '#1D3557'); (e.currentTarget.style.borderBottomColor = 'rgba(29,53,87,0.3)'); }}
               >
                 Learn More ›
               </Link>

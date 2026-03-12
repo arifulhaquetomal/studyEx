@@ -68,16 +68,16 @@ export default function StatsCounter() {
 
   return (
     <section ref={sectionRef} style={{
-      background: '#1C1007',
+      background: '#08101E',
       padding: '72px 0',
       position: 'relative',
-      borderTop: '1px solid rgba(201,168,76,0.2)',
-      borderBottom: '1px solid rgba(201,168,76,0.2)',
+      borderTop: '1px solid rgba(197,168,111,0.2)',
+      borderBottom: '1px solid rgba(197,168,111,0.2)',
     }}>
       {/* Background texture */}
       <div style={{
         position: 'absolute', inset: 0,
-        backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(201,168,76,0.03) 80px)',
+        backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(197,168,111,0.03) 80px)',
         pointerEvents: 'none',
       }} />
 
@@ -86,7 +86,7 @@ export default function StatsCounter() {
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
           <span style={{
             fontFamily: 'var(--font-label)', fontSize: 10, letterSpacing: '0.22em',
-            color: 'rgba(201,168,76,0.7)', textTransform: 'uppercase', display: 'block',
+            color: 'rgba(197,168,111,0.7)', textTransform: 'uppercase', display: 'block',
           }}>
             ❧ &nbsp; Our Record &nbsp; ❧
           </span>
@@ -104,25 +104,25 @@ export default function StatsCounter() {
               style={{
                 textAlign: 'center',
                 padding: '28px 20px',
-                borderRight: i < stats.length - 1 ? '1px solid rgba(201,168,76,0.12)' : 'none',
+                borderRight: i < stats.length - 1 ? '1px solid rgba(197,168,111,0.12)' : 'none',
                 opacity: 0,
               }}
             >
-              <div className="stats-number" style={{ color: '#C9A84C', marginBottom: 8, fontStyle: 'italic' }}>
+              <div className="stats-number" style={{ color: '#C5A86F', marginBottom: 8, fontStyle: 'italic' }}>
                 <Counter value={stat.value} suffix={stat.suffix} />
               </div>
               <div style={{
                 fontFamily: 'var(--font-label)',
                 fontSize: 10,
                 fontWeight: 500,
-                color: 'rgba(245,237,216,0.4)',
+                color: 'rgba(237,235,228,0.4)',
                 textTransform: 'uppercase',
                 letterSpacing: '0.14em',
               }}>
                 {stat.label}
               </div>
               {i < stats.length - 1 && (
-                <div style={{ fontSize: 10, color: 'rgba(201,168,76,0.2)', marginTop: 12 }}>✦</div>
+                <div style={{ fontSize: 10, color: 'rgba(197,168,111,0.2)', marginTop: 12 }}>✦</div>
               )}
             </div>
           ))}

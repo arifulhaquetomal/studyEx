@@ -10,7 +10,7 @@ const destinations = [
     fees: '£15,000 – £35,000/year',
     scholarships: 'Chevening · Commonwealth · University Merit',
     postStudyWork: '2 years (Graduate Route)',
-    color: '#3D2B1F',
+    color: '#112236',
   },
   {
     id: 'usa', flag: '🇺🇸', name: 'United States',
@@ -20,7 +20,7 @@ const destinations = [
     fees: '$25,000 – $60,000/year',
     scholarships: 'Fulbright · OPT/CPT · University Aid',
     postStudyWork: 'OPT: 1-3 years',
-    color: '#6B1A2E',
+    color: '#7A2035',
   },
   {
     id: 'canada', flag: '🇨🇦', name: 'Canada',
@@ -30,7 +30,7 @@ const destinations = [
     fees: 'CAD $20,000 – $45,000/year',
     scholarships: 'Vanier · University Merit · Provincial',
     postStudyWork: 'PGWP: up to 3 years',
-    color: '#7A4F2D',
+    color: '#1D3557',
   },
   {
     id: 'australia', flag: '🇦🇺', name: 'Australia',
@@ -40,7 +40,7 @@ const destinations = [
     fees: 'AUD $25,000 – $50,000/year',
     scholarships: 'Australia Awards · Endeavour · University',
     postStudyWork: '2-4 years (subclass 485)',
-    color: '#4A5C44',
+    color: '#4A6274',
   },
   {
     id: 'germany', flag: '🇩🇪', name: 'Germany',
@@ -50,7 +50,7 @@ const destinations = [
     fees: '€0 – €3,000/year (public unis)',
     scholarships: 'DAAD · Erasmus · Heinrich Böll',
     postStudyWork: '18 months job-seeking visa',
-    color: '#2C1A0E',
+    color: '#0F172A',
   },
   {
     id: 'ireland', flag: '🇮🇪', name: 'Ireland',
@@ -60,7 +60,7 @@ const destinations = [
     fees: '€10,000 – €25,000/year',
     scholarships: 'Government of Ireland · University Merit',
     postStudyWork: '2 years (Third Level Graduate Scheme)',
-    color: '#3D5A3E',
+    color: '#2C3D2C',
   },
   {
     id: 'newzealand', flag: '🇳🇿', name: 'New Zealand',
@@ -70,7 +70,7 @@ const destinations = [
     fees: 'NZD $22,000 – $45,000/year',
     scholarships: 'NZ Government · University Merit',
     postStudyWork: '1-3 years (Post Study Open Work)',
-    color: '#1C3A5C',
+    color: '#1A4B7C',
   },
   {
     id: 'uae', flag: '🇦🇪', name: 'Dubai / UAE',
@@ -80,7 +80,7 @@ const destinations = [
     fees: 'AED 50,000 – 120,000/year',
     scholarships: 'Merit Scholarships · University Aid',
     postStudyWork: 'Employment Visa',
-    color: '#5C4A2A',
+    color: '#2A3B4C',
   },
 ];
 
@@ -105,26 +105,26 @@ export default function Destinations() {
   const active = destinations.find(d => d.id === openId)!;
 
   return (
-    <section ref={sectionRef} style={{ padding: '96px 0', background: '#FDF6E3' }}>
+    <section ref={sectionRef} style={{ padding: '96px 0', background: '#F5F4F0' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }}>
         <div style={{ textAlign: 'center', marginBottom: 52 }}>
           <span className="section-label reveal">Study Destinations</span>
-          <h2 className="reveal" style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 'clamp(28px, 4vw, 44px)', color: '#1C1007', marginTop: 8, marginBottom: 16 }}>
+          <h2 className="reveal" style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 'clamp(28px, 4vw, 44px)', color: '#08101E', marginTop: 8, marginBottom: 16 }}>
             Where Will You Study?
           </h2>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 12, marginBottom: 14 }}>
-            <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.4)' }} />
-            <span style={{ color: '#C9A84C', fontSize: 10 }}>✦</span>
-            <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.4)' }} />
+            <div style={{ width: 40, height: 1, background: 'rgba(197,168,111,0.4)' }} />
+            <span style={{ color: '#C5A86F', fontSize: 10 }}>✦</span>
+            <div style={{ width: 40, height: 1, background: 'rgba(197,168,111,0.4)' }} />
           </div>
-          <p className="reveal" style={{ color: '#6B5B4B', fontSize: 15, maxWidth: 520, margin: '0 auto', fontStyle: 'italic' }}>
+          <p className="reveal" style={{ color: '#6D7782', fontSize: 15, maxWidth: 520, margin: '0 auto', fontStyle: 'italic' }}>
             We have established partnerships and extensive experience guiding students to top universities in 9 countries.
           </p>
         </div>
 
         <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }} className="destinations-layout">
           {/* Sidebar */}
-          <div style={{ width: 220, flexShrink: 0, border: '1px solid rgba(122,79,45,0.15)', background: '#F5EDD8', padding: '8px' }} className="dest-sidebar">
+          <div style={{ width: 220, flexShrink: 0, border: '1px solid rgba(29,53,87,0.15)', background: '#EDEBE4', padding: '8px' }} className="dest-sidebar">
             {destinations.map(dest => (
               <button
                 key={dest.id}
@@ -134,14 +134,14 @@ export default function Destinations() {
                   display: 'flex', alignItems: 'center', gap: 10,
                   background: openId === dest.id ? dest.color : 'transparent',
                   border: 'none', borderRadius: 0, cursor: 'pointer',
-                  borderLeft: `2px solid ${openId === dest.id ? '#C9A84C' : 'transparent'}`,
+                  borderLeft: `2px solid ${openId === dest.id ? '#C5A86F' : 'transparent'}`,
                   transition: 'all 0.2s ease', marginBottom: 2,
                 }}
               >
                 <span style={{ fontSize: 18 }}>{dest.flag}</span>
                 <span style={{
                   fontFamily: 'var(--font-body)', fontSize: 13,
-                  color: openId === dest.id ? '#F5EDD8' : '#1C1007',
+                  color: openId === dest.id ? '#EDEBE4' : '#08101E',
                   fontStyle: openId === dest.id ? 'italic' : 'normal',
                 }}>
                   {dest.name}
@@ -153,39 +153,39 @@ export default function Destinations() {
           {/* Content */}
           <div style={{
             flex: 1, minWidth: 300,
-            background: '#F5EDD8',
+            background: '#EDEBE4',
             padding: '36px',
-            border: '1px solid rgba(122,79,45,0.15)',
+            border: '1px solid rgba(29,53,87,0.15)',
             position: 'relative',
           }}>
             {/* Corner ornaments */}
-            <div style={{ position: 'absolute', top: 8, left: 8, width: 16, height: 16, borderTop: '1px solid rgba(201,168,76,0.5)', borderLeft: '1px solid rgba(201,168,76,0.5)' }} />
-            <div style={{ position: 'absolute', top: 8, right: 8, width: 16, height: 16, borderTop: '1px solid rgba(201,168,76,0.5)', borderRight: '1px solid rgba(201,168,76,0.5)' }} />
-            <div style={{ position: 'absolute', bottom: 8, left: 8, width: 16, height: 16, borderBottom: '1px solid rgba(201,168,76,0.5)', borderLeft: '1px solid rgba(201,168,76,0.5)' }} />
-            <div style={{ position: 'absolute', bottom: 8, right: 8, width: 16, height: 16, borderBottom: '1px solid rgba(201,168,76,0.5)', borderRight: '1px solid rgba(201,168,76,0.5)' }} />
+            <div style={{ position: 'absolute', top: 8, left: 8, width: 16, height: 16, borderTop: '1px solid rgba(197,168,111,0.5)', borderLeft: '1px solid rgba(197,168,111,0.5)' }} />
+            <div style={{ position: 'absolute', top: 8, right: 8, width: 16, height: 16, borderTop: '1px solid rgba(197,168,111,0.5)', borderRight: '1px solid rgba(197,168,111,0.5)' }} />
+            <div style={{ position: 'absolute', bottom: 8, left: 8, width: 16, height: 16, borderBottom: '1px solid rgba(197,168,111,0.5)', borderLeft: '1px solid rgba(197,168,111,0.5)' }} />
+            <div style={{ position: 'absolute', bottom: 8, right: 8, width: 16, height: 16, borderBottom: '1px solid rgba(197,168,111,0.5)', borderRight: '1px solid rgba(197,168,111,0.5)' }} />
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 24 }}>
               <div style={{
                 width: 60, height: 60,
                 background: active.color,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 32, border: '1px solid rgba(201,168,76,0.3)',
+                fontSize: 32, border: '1px solid rgba(197,168,111,0.3)',
               }}>
                 {active.flag}
               </div>
               <div>
-                <h3 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 26, color: '#1C1007' }}>{active.name}</h3>
-                <span style={{ fontSize: 10, color: '#C9A84C', fontFamily: 'var(--font-label)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Popular Destination</span>
+                <h3 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 26, color: '#08101E' }}>{active.name}</h3>
+                <span style={{ fontSize: 10, color: '#C5A86F', fontFamily: 'var(--font-label)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Popular Destination</span>
               </div>
             </div>
 
             {/* Ornament */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
-              <div style={{ width: 32, height: 1, background: '#C9A84C' }} />
-              <span style={{ color: '#C9A84C', fontSize: 8 }}>✦</span>
+              <div style={{ width: 32, height: 1, background: '#C5A86F' }} />
+              <span style={{ color: '#C5A86F', fontSize: 8 }}>✦</span>
             </div>
 
-            <p style={{ color: '#6B5B4B', lineHeight: 1.85, fontSize: 14, marginBottom: 24, fontStyle: 'italic' }}>{active.desc}</p>
+            <p style={{ color: '#6D7782', lineHeight: 1.85, fontSize: 14, marginBottom: 24, fontStyle: 'italic' }}>{active.desc}</p>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 28 }}>
               {[
@@ -197,13 +197,13 @@ export default function Destinations() {
               ].map(row => (
                 <div key={row.label} style={{
                   background: '#fff', padding: '12px 14px',
-                  border: '1px solid rgba(122,79,45,0.1)',
-                  borderLeft: '2px solid rgba(201,168,76,0.5)',
+                  border: '1px solid rgba(29,53,87,0.1)',
+                  borderLeft: '2px solid rgba(197,168,111,0.5)',
                 }}>
-                  <p style={{ fontSize: 9, color: '#6B5B4B', fontFamily: 'var(--font-label)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 4 }}>
+                  <p style={{ fontSize: 9, color: '#6D7782', fontFamily: 'var(--font-label)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 4 }}>
                     {row.label}
                   </p>
-                  <p style={{ fontSize: 12, fontWeight: 600, color: '#1C1007', lineHeight: 1.4, fontFamily: 'var(--font-heading)', fontStyle: 'italic' }}>{row.value}</p>
+                  <p style={{ fontSize: 12, fontWeight: 600, color: '#08101E', lineHeight: 1.4, fontFamily: 'var(--font-heading)', fontStyle: 'italic' }}>{row.value}</p>
                 </div>
               ))}
             </div>

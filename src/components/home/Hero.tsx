@@ -2,9 +2,9 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const studentCards = [
-  { name: 'Sarah Mitchell', uni: 'Edinburgh', country: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', course: 'MSc Data Science', avatar: 'SM', color: '#7A4F2D' },
-  { name: 'Mahmudul Hasan', uni: 'Michigan', country: '🇺🇸', course: 'MBA — Full Scholarship', avatar: 'MH', color: '#6B1A2E' },
-  { name: 'Habib Rahman', uni: 'Budapest', country: '🇭🇺', course: 'MBBS — Medicine', avatar: 'HR', color: '#4A5C44' },
+  { name: 'Sarah Mitchell', uni: 'Edinburgh', country: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', course: 'MSc Data Science', avatar: 'SM', color: '#1D3557' },
+  { name: 'Mahmudul Hasan', uni: 'Michigan', country: '🇺🇸', course: 'MBA — Full Scholarship', avatar: 'MH', color: '#7A2035' },
+  { name: 'Habib Rahman', uni: 'Budapest', country: '🇭🇺', course: 'MBBS — Medicine', avatar: 'HR', color: '#4A6274' },
 ];
 
 export default function Hero() {
@@ -45,13 +45,13 @@ export default function Hero() {
   return (
     <section className="hero-bg" style={{ paddingTop: 72 }}>
       {/* Vintage warm glow orbs */}
-      <div className="hero-orb" style={{ width: 500, height: 500, background: 'rgba(122, 79, 45, 0.12)', top: '-150px', right: '-80px' }} />
-      <div className="hero-orb" style={{ width: 350, height: 350, background: 'rgba(107, 26, 46, 0.08)', bottom: '-80px', left: '-40px' }} />
+      <div className="hero-orb" style={{ width: 500, height: 500, background: 'rgba(29, 53, 87, 0.12)', top: '-150px', right: '-80px' }} />
+      <div className="hero-orb" style={{ width: 350, height: 350, background: 'rgba(139, 26, 46, 0.08)', bottom: '-80px', left: '-40px' }} />
 
       {/* Aged paper texture lines */}
       <div style={{
         position: 'absolute', inset: 0, opacity: 1,
-        backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px)',
+        backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(197,168,111,0.04) 60px)',
         pointerEvents: 'none',
       }} />
 
@@ -62,13 +62,13 @@ export default function Hero() {
           <div ref={eyebrowRef}>
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: 10,
-              border: '1px solid rgba(201, 168, 76, 0.3)',
+              border: '1px solid rgba(197, 168, 111, 0.3)',
               padding: '8px 20px',
-              color: '#C9A84C', fontSize: 11, fontWeight: 600,
+              color: '#C5A86F', fontSize: 11, fontWeight: 600,
               fontFamily: 'var(--font-label)', letterSpacing: '0.18em', textTransform: 'uppercase',
-              marginBottom: 32, background: 'rgba(201, 168, 76, 0.06)',
+              marginBottom: 32, background: 'rgba(197, 168, 111, 0.06)',
             }}>
-              <span style={{ width: 5, height: 5, background: '#C9A84C', borderRadius: '50%', display: 'inline-block', animation: 'pulse-ring 2.5s ease-out infinite' }} />
+              <span style={{ width: 5, height: 5, background: '#C5A86F', borderRadius: '50%', display: 'inline-block', animation: 'pulse-ring 2.5s ease-out infinite' }} />
               Trusted by 500+ Students Since 2009
             </span>
           </div>
@@ -79,32 +79,32 @@ export default function Hero() {
               fontFamily: 'var(--font-heading)',
               fontSize: 'clamp(42px, 6vw, 82px)',
               fontWeight: 700,
-              color: '#F5EDD8',
+              color: '#EDEBE4',
               lineHeight: 1.08,
               marginBottom: 28,
               fontStyle: 'italic',
               letterSpacing: '-0.01em',
             }}>
               Your Global<br />
-              <span style={{ color: '#C9A84C' }}>Education</span>{' '}
+              <span style={{ color: '#C5A86F' }}>Education</span>{' '}
               Starts Here.
             </h1>
             {/* Ornamental rule under headline */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 28 }}>
-              <div style={{ flex: 1, maxWidth: 80, height: 1, background: 'rgba(201,168,76,0.4)' }} />
-              <span style={{ color: 'rgba(201,168,76,0.6)', fontSize: 14 }}>✦</span>
-              <div style={{ width: 24, height: 1, background: 'rgba(201,168,76,0.25)' }} />
+              <div style={{ flex: 1, maxWidth: 80, height: 1, background: 'rgba(197,168,111,0.4)' }} />
+              <span style={{ color: 'rgba(197,168,111,0.6)', fontSize: 14 }}>✦</span>
+              <div style={{ width: 24, height: 1, background: 'rgba(197,168,111,0.25)' }} />
             </div>
             <p style={{
               fontSize: 'clamp(16px, 2vw, 19px)',
-              color: 'rgba(245, 237, 216, 0.68)',
+              color: 'rgba(237, 235, 228, 0.68)',
               lineHeight: 1.85,
               maxWidth: 540,
               marginBottom: 40,
               fontStyle: 'italic',
             }}>
               From Dhaka to Edinburgh. From Sylhet to Toronto.{' '}
-              <strong style={{ color: 'rgba(245,237,216,0.92)', fontWeight: 600 }}>We get you there.</strong>{' '}
+              <strong style={{ color: 'rgba(237,235,228,0.92)', fontWeight: 600 }}>We get you there.</strong>{' '}
               Expert guidance for university applications, scholarships & visas.
             </p>
           </div>
@@ -120,7 +120,7 @@ export default function Hero() {
           </div>
 
           {/* Trust stats */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 40, marginTop: 56, paddingTop: 36, borderTop: '1px solid rgba(201,168,76,0.15)' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 40, marginTop: 56, paddingTop: 36, borderTop: '1px solid rgba(197,168,111,0.15)' }}>
             {[
               { num: '500+', label: 'Students Placed' },
               { num: '100%', label: 'Visa Success' },
@@ -128,8 +128,8 @@ export default function Hero() {
               { num: '15+', label: 'Years Experience' },
             ].map(stat => (
               <div key={stat.label}>
-                <div style={{ fontSize: 28, fontWeight: 700, fontFamily: 'var(--font-heading)', color: '#C9A84C', fontStyle: 'italic' }}>{stat.num}</div>
-                <div style={{ fontSize: 10, color: 'rgba(245,237,216,0.45)', fontFamily: 'var(--font-label)', textTransform: 'uppercase', letterSpacing: '0.12em', marginTop: 4 }}>{stat.label}</div>
+                <div style={{ fontSize: 28, fontWeight: 700, fontFamily: 'var(--font-heading)', color: '#C5A86F', fontStyle: 'italic' }}>{stat.num}</div>
+                <div style={{ fontSize: 10, color: 'rgba(237,235,228,0.45)', fontFamily: 'var(--font-label)', textTransform: 'uppercase', letterSpacing: '0.12em', marginTop: 4 }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -144,8 +144,8 @@ export default function Hero() {
               key={card.name}
               className="hero-student-card"
               style={{
-                background: 'rgba(240,224,190,0.06)',
-                border: '1px solid rgba(201, 168, 76, 0.2)',
+                background: 'rgba(234,230,218,0.06)',
+                border: '1px solid rgba(197, 168, 111, 0.2)',
                 padding: '16px 20px',
                 display: 'flex', alignItems: 'center', gap: 14,
                 minWidth: 220,
@@ -156,19 +156,19 @@ export default function Hero() {
               <div style={{
                 width: 44, height: 44,
                 background: card.color,
-                border: '1px solid rgba(201, 168, 76, 0.3)',
+                border: '1px solid rgba(197, 168, 111, 0.3)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontWeight: 700, color: '#F5EDD8', fontSize: 14, flexShrink: 0,
+                fontWeight: 700, color: '#EDEBE4', fontSize: 14, flexShrink: 0,
                 fontFamily: 'var(--font-heading)', fontStyle: 'italic',
               }}>
                 {card.avatar}
               </div>
               <div>
-                <p style={{ fontWeight: 600, color: '#F5EDD8', fontSize: 13, fontFamily: 'var(--font-heading)', fontStyle: 'italic' }}>{card.name}</p>
-                <p style={{ color: 'rgba(245,237,216,0.55)', fontSize: 11, marginTop: 2 }}>
+                <p style={{ fontWeight: 600, color: '#EDEBE4', fontSize: 13, fontFamily: 'var(--font-heading)', fontStyle: 'italic' }}>{card.name}</p>
+                <p style={{ color: 'rgba(237,235,228,0.55)', fontSize: 11, marginTop: 2 }}>
                   {card.country} {card.uni}
                 </p>
-                <p style={{ color: '#C9A84C', fontSize: 10, marginTop: 3, fontFamily: 'var(--font-label)', letterSpacing: '0.08em' }}>{card.course}</p>
+                <p style={{ color: '#C5A86F', fontSize: 10, marginTop: 3, fontFamily: 'var(--font-label)', letterSpacing: '0.08em' }}>{card.course}</p>
               </div>
             </div>
           ))}
@@ -178,7 +178,7 @@ export default function Hero() {
       {/* Bottom fade to parchment */}
       <div style={{
         position: 'absolute', bottom: 0, left: 0, right: 0, height: 140,
-        background: 'linear-gradient(to bottom, transparent, #FDF6E3)',
+        background: 'linear-gradient(to bottom, transparent, #F5F4F0)',
         pointerEvents: 'none',
       }} />
     </section>

@@ -36,26 +36,26 @@ export default function ContactSection() {
   };
 
   return (
-    <section ref={sectionRef} style={{ background: '#1C1007', padding: '96px 0', position: 'relative' }}>
+    <section ref={sectionRef} style={{ background: '#08101E', padding: '96px 0', position: 'relative' }}>
       {/* Background grid */}
       <div style={{
         position: 'absolute', inset: 0,
-        backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.03) 60px), repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(201,168,76,0.03) 80px)',
+        backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(197,168,111,0.03) 60px), repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(197,168,111,0.03) 80px)',
         pointerEvents: 'none',
       }} />
 
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px', position: 'relative' }}>
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
-          <span className="section-label reveal" style={{ color: '#C9A84C' }}>Get In Touch</span>
-          <h2 className="reveal" style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 'clamp(28px, 4vw, 44px)', color: '#F5EDD8', marginTop: 8, marginBottom: 16 }}>
+          <span className="section-label reveal" style={{ color: '#C5A86F' }}>Get In Touch</span>
+          <h2 className="reveal" style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 'clamp(28px, 4vw, 44px)', color: '#EDEBE4', marginTop: 8, marginBottom: 16 }}>
             Start Your Journey Today
           </h2>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 12, marginBottom: 14 }}>
-            <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.35)' }} />
-            <span style={{ color: 'rgba(201,168,76,0.5)', fontSize: 10 }}>✦</span>
-            <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.35)' }} />
+            <div style={{ width: 40, height: 1, background: 'rgba(197,168,111,0.35)' }} />
+            <span style={{ color: 'rgba(197,168,111,0.5)', fontSize: 10 }}>✦</span>
+            <div style={{ width: 40, height: 1, background: 'rgba(197,168,111,0.35)' }} />
           </div>
-          <p className="reveal" style={{ color: 'rgba(245,237,216,0.55)', fontSize: 15, maxWidth: 480, margin: '0 auto', fontStyle: 'italic' }}>
+          <p className="reveal" style={{ color: 'rgba(237,235,228,0.55)', fontSize: 15, maxWidth: 480, margin: '0 auto', fontStyle: 'italic' }}>
             Book a free consultation and let our expert counselors guide you toward your dream university.
           </p>
         </div>
@@ -65,12 +65,12 @@ export default function ContactSection() {
           <div className="reveal">
             {submitted ? (
               <div style={{
-                background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.25)',
+                background: 'rgba(197,168,111,0.08)', border: '1px solid rgba(197,168,111,0.25)',
                 padding: '48px', textAlign: 'center',
               }}>
-                <div style={{ fontSize: 40, marginBottom: 16, color: '#C9A84C' }}>✦</div>
-                <h3 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 28, color: '#F5EDD8', marginBottom: 12 }}>Message Received!</h3>
-                <p style={{ color: 'rgba(245,237,216,0.65)', lineHeight: 1.7, fontStyle: 'italic' }}>
+                <div style={{ fontSize: 40, marginBottom: 16, color: '#C5A86F' }}>✦</div>
+                <h3 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 28, color: '#EDEBE4', marginBottom: 12 }}>Message Received!</h3>
+                <p style={{ color: 'rgba(237,235,228,0.65)', lineHeight: 1.7, fontStyle: 'italic' }}>
                   Our team shall contact you within 24 hours to schedule your free consultation.
                 </p>
               </div>
@@ -83,7 +83,7 @@ export default function ContactSection() {
                     value={form.name}
                     onChange={e => setForm({...form, name: e.target.value})}
                   />
-                  {errors.name && <p style={{ color: '#C9A84C', fontSize: 11, marginTop: 4, fontFamily: 'var(--font-label)' }}>{errors.name}</p>}
+                  {errors.name && <p style={{ color: '#C5A86F', fontSize: 11, marginTop: 4, fontFamily: 'var(--font-label)' }}>{errors.name}</p>}
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
                   <div>
@@ -93,7 +93,7 @@ export default function ContactSection() {
                       value={form.email}
                       onChange={e => setForm({...form, email: e.target.value})}
                     />
-                    {errors.email && <p style={{ color: '#C9A84C', fontSize: 11, marginTop: 4, fontFamily: 'var(--font-label)' }}>{errors.email}</p>}
+                    {errors.email && <p style={{ color: '#C5A86F', fontSize: 11, marginTop: 4, fontFamily: 'var(--font-label)' }}>{errors.email}</p>}
                   </div>
                   <div>
                     <input
@@ -102,7 +102,7 @@ export default function ContactSection() {
                       value={form.phone}
                       onChange={e => setForm({...form, phone: e.target.value})}
                     />
-                    {errors.phone && <p style={{ color: '#C9A84C', fontSize: 11, marginTop: 4, fontFamily: 'var(--font-label)' }}>{errors.phone}</p>}
+                    {errors.phone && <p style={{ color: '#C5A86F', fontSize: 11, marginTop: 4, fontFamily: 'var(--font-label)' }}>{errors.phone}</p>}
                   </div>
                 </div>
                 <select
@@ -126,7 +126,7 @@ export default function ContactSection() {
                 <button type="submit" className="btn btn-red" style={{ width: '100%', justifyContent: 'center', fontSize: 12, padding: '15px' }}>
                   Send Message
                 </button>
-                <p style={{ color: 'rgba(245,237,216,0.3)', fontSize: 11, textAlign: 'center', fontStyle: 'italic' }}>
+                <p style={{ color: 'rgba(237,235,228,0.3)', fontSize: 11, textAlign: 'center', fontStyle: 'italic' }}>
                   By submitting, you agree to our Privacy Policy. We never share your data.
                 </p>
               </form>
@@ -145,21 +145,21 @@ export default function ContactSection() {
                 <div key={info.label} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
                   <div style={{
                     width: 36, height: 36,
-                    border: '1px solid rgba(201,168,76,0.25)',
+                    border: '1px solid rgba(197,168,111,0.25)',
                     display: 'flex', alignItems: 'center',
                     justifyContent: 'center', flexShrink: 0,
-                    color: '#C9A84C', fontSize: 12,
+                    color: '#C5A86F', fontSize: 12,
                   }}>✦</div>
                   <div>
-                    <p style={{ fontSize: 9, color: 'rgba(245,237,216,0.4)', fontFamily: 'var(--font-label)', textTransform: 'uppercase', letterSpacing: '0.14em', marginBottom: 4 }}>
+                    <p style={{ fontSize: 9, color: 'rgba(237,235,228,0.4)', fontFamily: 'var(--font-label)', textTransform: 'uppercase', letterSpacing: '0.14em', marginBottom: 4 }}>
                       {info.label}
                     </p>
                     {(info as any).href ? (
-                      <a href={(info as any).href} style={{ color: 'rgba(245,237,216,0.8)', textDecoration: 'none', fontSize: 14, fontStyle: 'italic' }}>
+                      <a href={(info as any).href} style={{ color: 'rgba(237,235,228,0.8)', textDecoration: 'none', fontSize: 14, fontStyle: 'italic' }}>
                         {info.value}
                       </a>
                     ) : (
-                      <p style={{ color: 'rgba(245,237,216,0.8)', fontSize: 14, lineHeight: 1.6, fontStyle: 'italic' }}>{info.value}</p>
+                      <p style={{ color: 'rgba(237,235,228,0.8)', fontSize: 14, lineHeight: 1.6, fontStyle: 'italic' }}>{info.value}</p>
                     )}
                   </div>
                 </div>
@@ -185,7 +185,7 @@ export default function ContactSection() {
                 </svg>
                 <div>
                   <p style={{ color: '#25D366', fontWeight: 600, fontSize: 14, fontFamily: 'var(--font-label)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Chat on WhatsApp</p>
-                  <p style={{ color: 'rgba(245,237,216,0.45)', fontSize: 11, fontStyle: 'italic' }}>Typically replies within 30 mins</p>
+                  <p style={{ color: 'rgba(237,235,228,0.45)', fontSize: 11, fontStyle: 'italic' }}>Typically replies within 30 mins</p>
                 </div>
               </a>
             </div>

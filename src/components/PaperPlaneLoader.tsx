@@ -90,7 +90,7 @@ function buildPathPolyline(steps = 120) {
 
 const GHOST_POINTS = buildPathPolyline(200);
 
-const TRAIL_COLORS = ['#C9A84C', '#7A4F2D', '#3D2B1F'];
+const TRAIL_COLORS = ['#C5A86F', '#1A4B7C', '#112236'];
 const DURATION = 2600;
 const HOLD = 300;
 const MAX_TRAIL_DOTS = 10;   // short tail — only last 10 dots kept
@@ -192,7 +192,7 @@ export default function PaperPlaneLoader({ onDone }: Props) {
         position: 'fixed',
         inset: 0,
         zIndex: 99999,
-        background: '#1C1007',
+        background: '#08101E',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -209,7 +209,7 @@ export default function PaperPlaneLoader({ onDone }: Props) {
       >
         <defs>
           <pattern id="ldr-grid" width="60" height="60" patternUnits="userSpaceOnUse">
-            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#C9A84C" strokeWidth="0.5" />
+            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#C5A86F" strokeWidth="0.5" />
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#ldr-grid)" />
@@ -219,7 +219,7 @@ export default function PaperPlaneLoader({ onDone }: Props) {
         aria-hidden="true"
         style={{
           position: 'absolute', width: 600, height: 600, borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(197,168,111,0.06) 0%, transparent 70%)',
           bottom: '-10%', left: '-8%', pointerEvents: 'none',
         }}
       />
@@ -227,7 +227,7 @@ export default function PaperPlaneLoader({ onDone }: Props) {
         aria-hidden="true"
         style={{
           position: 'absolute', width: 400, height: 400, borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(122,79,45,0.05) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(29,53,87,0.05) 0%, transparent 70%)',
           top: '5%', right: '5%', pointerEvents: 'none',
         }}
       />
@@ -243,8 +243,8 @@ export default function PaperPlaneLoader({ onDone }: Props) {
       >
         <defs>
           <linearGradient id="ghostGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%"   stopColor="#C9A84C" stopOpacity="0.1" />
-            <stop offset="100%" stopColor="#C9A84C" stopOpacity="0.1" />
+            <stop offset="0%"   stopColor="#C5A86F" stopOpacity="0.1" />
+            <stop offset="100%" stopColor="#C5A86F" stopOpacity="0.1" />
           </linearGradient>
 
         </defs>
@@ -295,7 +295,7 @@ export default function PaperPlaneLoader({ onDone }: Props) {
           transform: `translate(-50%, -50%) rotate(${planeState.angle}deg)`,
           pointerEvents: 'none',
           filter:
-            'drop-shadow(0 0 6px #C9A84C) drop-shadow(0 0 2px rgba(255,255,255,0.6))',
+            'drop-shadow(0 0 6px #C5A86F) drop-shadow(0 0 2px rgba(255,255,255,0.6))',
           willChange: 'transform',
         }}
       >
@@ -318,16 +318,16 @@ export default function PaperPlaneLoader({ onDone }: Props) {
           {/* Top wing */}
           <path
             d="M 50 14 L 2 2 L 18 14 Z"
-            fill="#F5EDD8"
-            stroke="rgba(201,168,76,0.3)"
+            fill="#EDEBE4"
+            stroke="rgba(197,168,111,0.3)"
             strokeWidth="0.5"
             strokeLinejoin="round"
           />
           {/* Bottom wing */}
           <path
             d="M 50 14 L 2 2 26 L 18 14 Z"
-            fill="#C9A84C"
-            stroke="rgba(201,168,76,0.3)"
+            fill="#C5A86F"
+            stroke="rgba(197,168,111,0.3)"
             strokeWidth="0.5"
             strokeLinejoin="round"
           />
@@ -341,7 +341,7 @@ export default function PaperPlaneLoader({ onDone }: Props) {
           <line
             x1="50" y1="14"
             x2="18" y2="14"
-            stroke="#7A4F2D"
+            stroke="#1A4B7C"
             strokeWidth="0.8"
             strokeLinecap="round"
             strokeDasharray="2 2"
@@ -355,7 +355,7 @@ export default function PaperPlaneLoader({ onDone }: Props) {
             strokeLinecap="round"
           />
           {/* Nose tip glow dot */}
-          <circle cx="49" cy="14" r="1.5" fill="#C9A84C" />
+          <circle cx="49" cy="14" r="1.5" fill="#C5A86F" />
         </svg>
       </div>
 
@@ -375,20 +375,20 @@ export default function PaperPlaneLoader({ onDone }: Props) {
             fontStyle: "italic",
             fontSize: 'clamp(28px, 4.5vw, 48px)',
             fontWeight: 700,
-            color: '#F5EDD8',
+            color: '#EDEBE4',
             letterSpacing: '-0.5px',
             lineHeight: 1,
             marginBottom: 10,
           }}
         >
-          Study<span style={{ color: '#C9A84C' }}>Ex</span>
+          Study<span style={{ color: '#C5A86F' }}>Ex</span>
         </div>
         <div
           style={{
             fontFamily: "var(--font-label)",
             fontSize: 10,
             letterSpacing: '0.4em',
-            color: 'rgba(245,237,216,0.35)',
+            color: 'rgba(237,235,228,0.35)',
             textTransform: 'uppercase',
           }}
         >
@@ -411,7 +411,7 @@ export default function PaperPlaneLoader({ onDone }: Props) {
             style={{
               height: '100%',
               width: `${progress * 100}%`,
-              background: 'linear-gradient(90deg, #7A4F2D, #C9A84C, #7A4F2D)',
+              background: 'linear-gradient(90deg, #1A4B7C, #C5A86F, #1A4B7C)',
               borderRadius: 99,
               transition: 'width 0.05s linear',
             }}
