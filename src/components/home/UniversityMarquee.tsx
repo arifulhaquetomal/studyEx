@@ -34,37 +34,36 @@ function LogoChip({ name, short }: { name: string; short: string }) {
         display: 'inline-flex',
         alignItems: 'center',
         gap: 10,
-        background: '#fff',
-        borderRadius: 12,
-        padding: '12px 20px',
-        boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
-        border: '1px solid rgba(0,87,255,0.08)',
+        background: '#FDF6E3',
+        padding: '10px 18px',
+        border: '1px solid rgba(122, 79, 45, 0.2)',
+        borderLeft: '2px solid rgba(201,168,76,0.5)',
         whiteSpace: 'nowrap',
         cursor: 'default',
         transition: 'all 0.3s ease',
         flexShrink: 0,
       }}
       onMouseEnter={e => {
-        (e.currentTarget as HTMLElement).style.boxShadow = '0 6px 24px rgba(0,87,255,0.15)';
+        (e.currentTarget as HTMLElement).style.borderColor = '#C9A84C';
+        (e.currentTarget as HTMLElement).style.background = '#F5EDD8';
         (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
-        (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,87,255,0.2)';
       }}
       onMouseLeave={e => {
-        (e.currentTarget as HTMLElement).style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
+        (e.currentTarget as HTMLElement).style.borderColor = 'rgba(122, 79, 45, 0.2)';
+        (e.currentTarget as HTMLElement).style.background = '#FDF6E3';
         (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
-        (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,87,255,0.08)';
       }}
     >
       <div style={{
-        width: 32, height: 32, borderRadius: 8,
-        background: 'linear-gradient(135deg, #0057FF15, #0057FF25)',
+        width: 28, height: 28,
+        background: 'rgba(122,79,45,0.08)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        fontSize: 14, fontWeight: 700, color: 'var(--blue)',
-        fontFamily: 'var(--font-heading)',
+        fontSize: 13, fontWeight: 700, color: '#7A4F2D',
+        fontFamily: 'var(--font-heading)', fontStyle: 'italic',
       }}>
         {short[0]}
       </div>
-      <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--navy)', fontFamily: 'var(--font-body)' }}>
+      <span style={{ fontSize: 12, fontWeight: 600, color: '#1C1007', fontFamily: 'var(--font-body)' }}>
         {short}
       </span>
     </div>
@@ -92,16 +91,18 @@ export default function UniversityMarquee() {
   const doubled2 = [...row2, ...row2];
 
   return (
-    <section ref={sectionRef} style={{ background: 'var(--white-soft)', padding: '80px 0', overflow: 'hidden' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px', textAlign: 'center', marginBottom: 48 }}>
-        <span className="section-label reveal">OUR ACCEPTANCES</span>
-        <h2 className="reveal" style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 4vw, 44px)', color: 'var(--navy)', marginTop: 8, marginBottom: 16 }}>
+    <section ref={sectionRef} style={{ background: '#F5EDD8', padding: '80px 0', overflow: 'hidden', borderTop: '1px solid rgba(122,79,45,0.12)', borderBottom: '1px solid rgba(122,79,45,0.12)' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px', textAlign: 'center', marginBottom: 44 }}>
+        <span className="section-label reveal">Our Acceptances</span>
+        <h2 className="reveal" style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 'clamp(28px, 4vw, 44px)', color: '#1C1007', marginTop: 8, marginBottom: 16 }}>
           Our Students Have Been Accepted To
         </h2>
         <div className="reveal" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
           <span style={{
-            background: 'var(--navy)', color: 'var(--gold)', borderRadius: 999,
-            padding: '6px 18px', fontSize: 13, fontWeight: 600, fontFamily: 'var(--font-label)',
+            background: '#1C1007', color: '#C9A84C',
+            padding: '6px 20px', fontSize: 11, fontWeight: 600,
+            fontFamily: 'var(--font-label)', letterSpacing: '0.1em', textTransform: 'uppercase',
+            border: '1px solid rgba(201,168,76,0.3)',
           }}>
             200+ Universities Worldwide
           </span>
@@ -109,8 +110,8 @@ export default function UniversityMarquee() {
       </div>
 
       {/* Row 1 — left */}
-      <div style={{ overflow: 'hidden', marginBottom: 20, maskImage: 'linear-gradient(90deg, transparent, black 10%, black 90%, transparent)' }}>
-        <div style={{ display: 'flex', gap: 16, width: 'max-content' }} className="marquee-track--left">
+      <div style={{ overflow: 'hidden', marginBottom: 14, maskImage: 'linear-gradient(90deg, transparent, black 8%, black 92%, transparent)' }}>
+        <div style={{ display: 'flex', gap: 12, width: 'max-content' }} className="marquee-track--left">
           {doubled1.map((uni, i) => (
             <LogoChip key={`r1-${i}`} name={uni.name} short={uni.short} />
           ))}
@@ -118,8 +119,8 @@ export default function UniversityMarquee() {
       </div>
 
       {/* Row 2 — right */}
-      <div style={{ overflow: 'hidden', maskImage: 'linear-gradient(90deg, transparent, black 10%, black 90%, transparent)' }}>
-        <div style={{ display: 'flex', gap: 16, width: 'max-content' }} className="marquee-track--right">
+      <div style={{ overflow: 'hidden', maskImage: 'linear-gradient(90deg, transparent, black 8%, black 92%, transparent)' }}>
+        <div style={{ display: 'flex', gap: 12, width: 'max-content' }} className="marquee-track--right">
           {doubled2.map((uni, i) => (
             <LogoChip key={`r2-${i}`} name={uni.name} short={uni.short} />
           ))}

@@ -12,7 +12,7 @@ We then map this against the entry requirements of hundreds of global universiti
 
 This is not a generic service. Every evaluation is personalised and delivered by a specialist counselor with experience in your target country.`,
     steps: ['Submit your academic documents', 'Meet your dedicated counselor', 'Receive your profile report within 48 hours', 'Get your university shortlist with admission probability ratings'],
-    color: '#0057FF',
+    color: '#7A4F2D',
   },
   {
     id: 'uni-selection',
@@ -25,7 +25,7 @@ We consider: global rankings, program reputation, scholarship availability, post
 
 Our counselors have direct relationships with international recruitment offices at over 50 universities globally, giving you insider knowledge that no public source provides.`,
     steps: ['Profile analysis complete', 'Research 100+ programs matching your goals', 'Shortlist 6–10 target universities', 'Strategy meeting to finalise your list'],
-    color: '#E8173A',
+    color: '#6B1A2E',
   },
   {
     id: 'application',
@@ -38,7 +38,7 @@ Our SOP writers are Masters and PhD graduates who know what admissions officers 
 
 We also guide your academic referees on how to write impactful recommendation letters, manage all application portals, track deadlines, and submit everything before it's due.`,
     steps: ['SOP strategy session with your counselor', 'Draft 1 → 2 → 3 review cycle', 'Recommendation letter briefing for referees', 'Final submission with checklist verification'],
-    color: '#F5A623',
+    color: '#7A5C44',
   },
   {
     id: 'scholarship',
@@ -51,7 +51,7 @@ We maintain a continuously updated database of 500+ scholarships across all stud
 
 Our students have collectively received over BDT 50 crore in scholarship funding across their study programs.`,
     steps: ['Scholarship database matching to your profile', 'Application calendar creation', 'Essay writing support for scholarship applications', 'Submission tracking and follow-up'],
-    color: '#9333EA',
+    color: '#1C3A5C',
   },
   {
     id: 'visa',
@@ -64,7 +64,7 @@ Our visa team meticulously prepares every document — financial statements, spo
 
 We know the specific requirements of each country's visa system and tailor our approach accordingly. No generic checklists — precise, country-specific guidance every time.`,
     steps: ['Document collection & verification', 'Financial statement preparation', 'Mock interview preparation (where required)', 'Visa application submission & tracking'],
-    color: '#0057FF',
+    color: '#3D2B1F',
   },
   {
     id: 'pre-departure',
@@ -77,7 +77,7 @@ We cover: accommodation search and booking strategy, travel insurance selection,
 
 We also connect you with our alumni network in your destination city — real students who've done it before and are happy to help newcomers settle in.`,
     steps: ['Accommodation search guidance', 'Travel insurance and logistics', 'Financial setup (bank account, cards)', 'Alumni network introduction in your city'],
-    color: '#25D366',
+    color: '#4A5C44',
   },
   {
     id: 'test-prep',
@@ -90,7 +90,7 @@ Our test preparation programs are led by experienced instructors who have themse
 
 Our students consistently achieve Band 7.0+ on IELTS and 100+ on TOEFL, unlocking top-ranked universities and scholarship opportunities that lower scores would foreclose.`,
     steps: ['Diagnostic assessment', 'Personalised study plan creation', 'Weekly classes + practice tests', 'Final mock exam before test day'],
-    color: '#E8173A',
+    color: '#6B1A2E',
   },
   {
     id: 'financial',
@@ -103,7 +103,7 @@ For student loans, we work with multiple partner banks in Bangladesh who offer c
 
 We also advise on part-time work rights in each country, helping you plan a realistic budget that includes living costs, travel, and academic expenses — so you're never caught off-guard financially.`,
     steps: ['Financial need assessment', 'Loan partner bank introduction', 'Documentation preparation', 'Bank guarantee letter guidance'],
-    color: '#F5A623',
+    color: '#7A4F2D',
   },
 ];
 
@@ -111,13 +111,14 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section style={{ background: 'var(--navy)', padding: '160px 28px 96px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span className="section-label" style={{ color: '#60A5FA' }}>WHAT WE DO</span>
-          <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(36px, 5vw, 64px)', color: '#fff', marginTop: 12, marginBottom: 20 }}>
-            Our <span style={{ color: '#60A5FA' }}>Services</span>
+      <section style={{ background: '#1C1007', padding: '160px 28px 96px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px)', backgroundSize: '80px 80px', pointerEvents: 'none' }} />
+        <div style={{ maxWidth: 800, margin: '0 auto', position: 'relative' }}>
+          <span className="section-label" style={{ color: '#C9A84C' }}>What We Do</span>
+          <h1 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 'clamp(36px, 5vw, 64px)', color: '#F5EDD8', marginTop: 12, marginBottom: 20 }}>
+            Our <span style={{ color: '#C9A84C' }}>Services</span>
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 18, lineHeight: 1.8, maxWidth: 600, margin: '0 auto' }}>
+          <p style={{ color: 'rgba(245,237,216,0.6)', fontSize: 17, lineHeight: 1.85, maxWidth: 600, margin: '0 auto', fontStyle: 'italic' }}>
             End-to-end international education support — from your first free consultation to the day you land at your destination university.
           </p>
         </div>
@@ -134,37 +135,38 @@ export default function ServicesPage() {
               gridTemplateColumns: i % 2 === 0 ? '1fr 1fr' : '1fr 1fr',
               gap: 60, alignItems: 'start',
               paddingBottom: 80, marginBottom: 80,
-              borderBottom: i < services.length - 1 ? '1px solid rgba(0,87,255,0.08)' : 'none',
+              borderBottom: i < services.length - 1 ? '1px solid rgba(122,79,45,0.12)' : 'none',
             }}
             className="service-section"
           >
             <div style={{ order: i % 2 === 0 ? 0 : 1 }}>
               <div style={{
-                width: 72, height: 72, borderRadius: 18,
-                background: `${service.color}15`,
+                width: 56, height: 56,
+                background: service.color,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 36, marginBottom: 24,
+                fontSize: 28, marginBottom: 24,
+                border: '1px solid rgba(201,168,76,0.3)',
               }}>
                 {service.icon}
               </div>
               <span style={{
                 display: 'inline-block',
-                background: `${service.color}12`,
-                color: service.color, padding: '4px 14px', borderRadius: 999,
-                fontSize: 11, fontWeight: 600, fontFamily: 'var(--font-label)',
-                textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 12,
+                border: '1px solid rgba(201,168,76,0.3)',
+                color: '#C9A84C', padding: '3px 12px',
+                fontSize: 10, fontWeight: 600, fontFamily: 'var(--font-label)',
+                textTransform: 'uppercase', letterSpacing: '0.14em', marginBottom: 12,
               }}>
                 Service {String(i + 1).padStart(2, '0')}
               </span>
-              <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(24px, 3vw, 36px)', color: 'var(--navy)', marginBottom: 8 }}>
+              <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 'clamp(24px, 3vw, 36px)', color: '#1C1007', marginBottom: 8 }}>
                 {service.title}
               </h2>
-              <p style={{ color: service.color, fontWeight: 600, fontSize: 16, marginBottom: 20, fontStyle: 'italic' }}>
+              <p style={{ color: '#7A4F2D', fontWeight: 600, fontSize: 15, marginBottom: 20, fontStyle: 'italic' }}>
                 "{service.tagline}"
               </p>
               <div>
                 {service.desc.split('\n\n').map((para, j) => (
-                  <p key={j} style={{ color: 'var(--gray)', fontSize: 15, lineHeight: 1.85, marginBottom: 14 }}>{para}</p>
+                  <p key={j} style={{ color: '#6B5B4B', fontSize: 14, lineHeight: 1.9, marginBottom: 14 }}>{para}</p>
                 ))}
               </div>
               <Link to="/apply" className="btn btn-red" style={{ marginTop: 16 }}>
@@ -174,20 +176,21 @@ export default function ServicesPage() {
 
             <div style={{ order: i % 2 === 0 ? 1 : 0 }}>
               <div style={{
-                background: 'var(--white-soft)', borderRadius: 20, padding: '32px',
-                border: '1px solid rgba(0,87,255,0.08)',
+                background: '#F5EDD8', padding: '28px',
+                border: '1px solid rgba(122,79,45,0.15)',
+                borderTop: '2px solid #C9A84C',
               }}>
-                <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: 18, color: 'var(--navy)', marginBottom: 24 }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: 18, color: '#1C1007', marginBottom: 24 }}>
                   How It Works
                 </h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                   {service.steps.map((step, j) => (
                     <div key={j} className="process-step">
-                      <div className="step-number" style={{ background: service.color }}>
+                      <div className="step-number" style={{ background: '#1C1007', border: '1px solid rgba(201,168,76,0.4)' }}>
                         {j + 1}
                       </div>
                       <div style={{ paddingTop: 10 }}>
-                        <p style={{ color: 'var(--navy)', fontSize: 14, fontWeight: 500, lineHeight: 1.5 }}>{step}</p>
+                        <p style={{ color: '#1C1007', fontSize: 13, lineHeight: 1.6 }}>{step}</p>
                       </div>
                     </div>
                   ))}
@@ -195,18 +198,19 @@ export default function ServicesPage() {
               </div>
 
               <div style={{
-                marginTop: 20,
-                background: `linear-gradient(135deg, ${service.color}10, ${service.color}05)`,
-                border: `1px solid ${service.color}20`,
-                borderRadius: 16, padding: '20px',
-                display: 'flex', alignItems: 'center', gap: 16,
+                marginTop: 16,
+                background: 'rgba(28,16,7,0.05)',
+                border: '1px solid rgba(122,79,45,0.15)',
+                borderLeft: '2px solid #C9A84C',
+                padding: '16px 18px',
+                display: 'flex', alignItems: 'center', gap: 14,
               }}>
-                <span style={{ fontSize: 32 }}>💬</span>
+                <span style={{ color: '#C9A84C', fontSize: 16 }}>✦</span>
                 <div>
-                  <p style={{ fontWeight: 600, color: 'var(--navy)', fontSize: 14 }}>Have questions?</p>
+                  <p style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontWeight: 600, color: '#1C1007', fontSize: 13 }}>Have questions?</p>
                   <a href="https://wa.me/8801733933689" target="_blank" rel="noreferrer"
-                    style={{ color: service.color, fontSize: 13, textDecoration: 'none', fontWeight: 500 }}>
-                    Chat with a specialist on WhatsApp →
+                    style={{ color: '#7A4F2D', fontSize: 12, textDecoration: 'none', fontFamily: 'var(--font-label)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                    Chat with a specialist on WhatsApp
                   </a>
                 </div>
               </div>

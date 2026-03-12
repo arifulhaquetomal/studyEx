@@ -6,8 +6,8 @@ const testimonials = [
     uni: 'Western Michigan University',
     flag: '🇺🇸',
     avatar: 'MH',
-    color: '#E8173A',
-    bg: 'linear-gradient(135deg,#E8173A,#FF6B6B)',
+    color: '#6B1A2E',
+    bg: 'linear-gradient(135deg,#6B1A2E,#8B3A4E)',
     course: 'MBA — Full Scholarship',
     review:
       'Studying in the U.S. with a full scholarship was once just a dream — StudyEx made it real. Their guidance on my SOP and scholarship application was exceptional. They truly go above and beyond for every single student.',
@@ -19,8 +19,8 @@ const testimonials = [
     uni: 'University of Toronto',
     flag: '🇨🇦',
     avatar: 'NJ',
-    color: '#0057FF',
-    bg: 'linear-gradient(135deg,#0057FF,#00C6FF)',
+    color: '#3D2B1F',
+    bg: 'linear-gradient(135deg,#3D2B1F,#7A4F2D)',
     course: 'MSc Computer Science',
     review:
       'I was completely lost in the maze of Canadian applications until I found StudyEx. They handled everything — shortlisting, SOP, visa prep. Got in with a scholarship! I cannot thank them enough for changing my life.',
@@ -32,8 +32,8 @@ const testimonials = [
     uni: 'University of Edinburgh',
     flag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
     avatar: 'RH',
-    color: '#7C3AED',
-    bg: 'linear-gradient(135deg,#7C3AED,#A78BFA)',
+    color: '#1C3A5C',
+    bg: 'linear-gradient(135deg,#1C3A5C,#2D5C8A)',
     course: 'MSc Data Science',
     review:
       'StudyEx is the real deal. Professional, caring, and incredibly knowledgeable. They knew exactly which universities would accept my profile and helped me secure a £6,000 scholarship. Best investment I ever made.',
@@ -45,8 +45,8 @@ const testimonials = [
     uni: 'TU Munich',
     flag: '🇩🇪',
     avatar: 'TB',
-    color: '#F5A623',
-    bg: 'linear-gradient(135deg,#F5A623,#FFC36A)',
+    color: '#7A5C44',
+    bg: 'linear-gradient(135deg,#7A5C44,#A87A5A)',
     course: 'MSc Mechanical Engineering',
     review:
       'Germany was my dream and StudyEx made it happen in just 6 months. Free public university, DAAD scholarship support, and they even helped me prepare for my language certificate. Absolutely amazing team!',
@@ -58,8 +58,8 @@ const testimonials = [
     uni: 'University of Melbourne',
     flag: '🇦🇺',
     avatar: 'FA',
-    color: '#059669',
-    bg: 'linear-gradient(135deg,#059669,#34D399)',
+    color: '#2D4A2D',
+    bg: 'linear-gradient(135deg,#2D4A2D,#4A5C44)',
     course: 'PhD Biotechnology',
     review:
       'The visa process for Australia scared me but the StudyEx team was calm, professional, and handled every document perfectly. Got my visa in 3 weeks. Now living my absolute dream in Melbourne!',
@@ -71,8 +71,8 @@ const testimonials = [
     uni: 'University College Dublin',
     flag: '🇮🇪',
     avatar: 'SA',
-    color: '#E8173A',
-    bg: 'linear-gradient(135deg,#E8173A,#FF8C42)',
+    color: '#6B1A2E',
+    bg: 'linear-gradient(135deg,#6B1A2E,#A83A2D)',
     course: 'MSc Marketing',
     review:
       'StudyEx found me a university AND a scholarship I had no idea existed. They were with me every step — application, visa, pre-departure. I felt genuinely cared for, not just treated as a client.',
@@ -84,8 +84,8 @@ const testimonials = [
     uni: 'Université de Paris',
     flag: '🇫🇷',
     avatar: 'IK',
-    color: '#0057FF',
-    bg: 'linear-gradient(135deg,#0057FF,#7C3AED)',
+    color: '#3D2B1F',
+    bg: 'linear-gradient(135deg,#3D2B1F,#7A4F2D)',
     course: 'MSc International Relations',
     review:
       'France seemed impossibly far — language barrier, different system, everything. StudyEx guided me through every single step. Their expertise saved me months of confusion and stress. Truly world-class consultancy.',
@@ -97,8 +97,8 @@ const testimonials = [
     uni: 'Massey University',
     flag: '🇳🇿',
     avatar: 'RP',
-    color: '#7C3AED',
-    bg: 'linear-gradient(135deg,#7C3AED,#059669)',
+    color: '#4A5C44',
+    bg: 'linear-gradient(135deg,#4A5C44,#1C3A5C)',
     course: 'MBA Leadership',
     review:
       'New Zealand was not even on my radar until StudyEx showed me the opportunities there. Post-study work visa, beautiful country, world-class university — honestly the best decision of my entire life.',
@@ -188,23 +188,18 @@ export default function Testimonials() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       style={{
-        background: '#fff',
+        background: '#F5EDD8',
         padding: '80px 0 64px',
         position: 'relative',
         overflow: 'hidden',
+        borderTop: '1px solid rgba(122,79,45,0.12)',
+        borderBottom: '1px solid rgba(122,79,45,0.12)',
       }}
     >
-      {/* Decorative bg blobs */}
+      {/* Vintage diagonal rule */}
       <div style={{
-        position: 'absolute', top: -120, right: -120, width: 480, height: 480,
-        borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(0,87,255,0.05) 0%, transparent 70%)',
-        pointerEvents: 'none',
-      }} />
-      <div style={{
-        position: 'absolute', bottom: -80, left: -80, width: 320, height: 320,
-        borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(232,23,58,0.05) 0%, transparent 70%)',
+        position: 'absolute', inset: 0,
+        backgroundImage: 'repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(201,168,76,0.02) 41px)',
         pointerEvents: 'none',
       }} />
 
@@ -217,23 +212,24 @@ export default function Testimonials() {
           transform: visible ? 'translateY(0)' : 'translateY(20px)',
           transition: 'all 0.6s ease',
         }}>
-          <span style={{
-            fontFamily: 'var(--font-label)', fontSize: 11, letterSpacing: '0.18em',
-            color: 'var(--blue)', fontWeight: 600, textTransform: 'uppercase',
-            display: 'inline-block', marginBottom: 12,
-          }}>
-            STUDENT VOICES
+          <span className="section-label">
+            Student Voices
           </span>
           <h2 style={{
-            fontFamily: 'var(--font-heading)',
+            fontFamily: 'var(--font-heading)', fontStyle: 'italic',
             fontSize: 'clamp(26px, 3.5vw, 44px)',
-            color: 'var(--navy)', margin: '0 0 10px', lineHeight: 1.15,
+            color: '#1C1007', margin: '8px 0 10px', lineHeight: 1.15,
           }}>
             Real Stories. Real Results.
           </h2>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+            <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.4)' }} />
+            <span style={{ color: '#C9A84C', fontSize: 10 }}>✦</span>
+            <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.4)' }} />
+          </div>
           <p style={{
-            color: 'var(--gray)', fontSize: 16, maxWidth: 440, margin: '0 auto',
-            fontFamily: 'var(--font-body)',
+            color: '#6B5B4B', fontSize: 15, maxWidth: 440, margin: '0 auto',
+            fontFamily: 'var(--font-body)', fontStyle: 'italic',
           }}>
             Hear straight from students whose lives changed with StudyEx.
           </p>
@@ -291,23 +287,21 @@ export default function Testimonials() {
               onClick={goPrev}
               aria-label="Previous testimonial"
               style={{
-                width: 44, height: 44, borderRadius: '50%',
-                border: '2px solid rgba(0,87,255,0.2)',
-                background: '#fff', cursor: 'pointer',
+                width: 40, height: 40, borderRadius: 0,
+                border: '1px solid rgba(122,79,45,0.25)',
+                background: 'transparent', cursor: 'pointer',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 20, color: 'var(--blue)',
+                fontSize: 20, color: '#7A4F2D',
                 transition: 'all 0.25s ease',
                 flexShrink: 0,
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = 'var(--blue)';
-                e.currentTarget.style.color = '#fff';
-                e.currentTarget.style.borderColor = 'var(--blue)';
+                e.currentTarget.style.background = '#7A4F2D';
+                e.currentTarget.style.color = '#F5EDD8';
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.background = '#fff';
-                e.currentTarget.style.color = 'var(--blue)';
-                e.currentTarget.style.borderColor = 'rgba(0,87,255,0.2)';
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = '#7A4F2D';
               }}
             >
               ‹
@@ -316,16 +310,16 @@ export default function Testimonials() {
             {/* Dots + progress */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
               {/* Dots */}
-              <div style={{ display: 'flex', gap: 8 }}>
+              <div style={{ display: 'flex', gap: 6 }}>
                 {testimonials.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => goTo(i, i > current ? 'next' : 'prev')}
                     aria-label={`Go to testimonial ${i + 1}`}
                     style={{
-                      width: i === current ? 28 : 8,
-                      height: 8, borderRadius: 999,
-                      background: i === current ? 'var(--blue)' : 'rgba(0,87,255,0.2)',
+                      width: i === current ? 24 : 6,
+                      height: 6, borderRadius: 0,
+                      background: i === current ? '#C9A84C' : 'rgba(122,79,45,0.2)',
                       border: 'none', cursor: 'pointer', padding: 0,
                       transition: 'all 0.35s cubic-bezier(0.4,0,0.2,1)',
                     }}
@@ -335,12 +329,12 @@ export default function Testimonials() {
 
               {/* Progress bar */}
               <div style={{
-                width: 120, height: 2, borderRadius: 999,
-                background: 'rgba(0,87,255,0.1)', overflow: 'hidden',
+                width: 120, height: 2, borderRadius: 0,
+                background: 'rgba(122,79,45,0.15)', overflow: 'hidden',
               }}>
                 <div style={{
-                  height: '100%', borderRadius: 999,
-                  background: 'var(--blue)',
+                  height: '100%', borderRadius: 0,
+                  background: '#C9A84C',
                   width: `${paused ? progress : progress}%`,
                   transition: paused ? 'none' : 'width 0.03s linear',
                 }} />
@@ -352,23 +346,21 @@ export default function Testimonials() {
               onClick={goNext}
               aria-label="Next testimonial"
               style={{
-                width: 44, height: 44, borderRadius: '50%',
-                border: '2px solid rgba(0,87,255,0.2)',
-                background: '#fff', cursor: 'pointer',
+                width: 40, height: 40, borderRadius: 0,
+                border: '1px solid rgba(122,79,45,0.25)',
+                background: 'transparent', cursor: 'pointer',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 20, color: 'var(--blue)',
+                fontSize: 20, color: '#7A4F2D',
                 transition: 'all 0.25s ease',
                 flexShrink: 0,
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = 'var(--blue)';
-                e.currentTarget.style.color = '#fff';
-                e.currentTarget.style.borderColor = 'var(--blue)';
+                e.currentTarget.style.background = '#7A4F2D';
+                e.currentTarget.style.color = '#F5EDD8';
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.background = '#fff';
-                e.currentTarget.style.color = 'var(--blue)';
-                e.currentTarget.style.borderColor = 'rgba(0,87,255,0.2)';
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = '#7A4F2D';
               }}
             >
               ›
@@ -419,27 +411,8 @@ export default function Testimonials() {
 
         {/* Bottom CTA */}
         <div style={{ textAlign: 'center', marginTop: 44 }}>
-          <a
-            href="/apply"
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: 10,
-              background: 'var(--red)', color: '#fff',
-              padding: '14px 32px', borderRadius: 999,
-              fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 15,
-              textDecoration: 'none',
-              boxShadow: '0 4px 24px rgba(232,23,58,0.3)',
-              transition: 'all 0.3s ease',
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 8px 32px rgba(232,23,58,0.45)';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 24px rgba(232,23,58,0.3)';
-            }}
-          >
-            Join Our Success Stories →
+          <a href="/apply" className="btn btn-red" style={{ textDecoration: 'none' }}>
+            Join Our Success Stories
           </a>
         </div>
       </div>
@@ -458,11 +431,11 @@ function SlideCard({
   return (
     <div style={{
       ...style,
-      borderRadius: 24,
+      borderRadius: 0,
       overflow: 'hidden',
-      boxShadow: '0 8px 48px rgba(0,0,0,0.10)',
-      border: '1px solid rgba(0,0,0,0.06)',
-      background: '#fff',
+      boxShadow: '0 4px 24px rgba(28,16,7,0.12)',
+      border: '1px solid rgba(122,79,45,0.2)',
+      background: '#FDF6E3',
       display: 'flex',
       flexWrap: 'wrap',
       minHeight: 300,
@@ -536,24 +509,24 @@ function SlideCard({
       {/* Right content panel */}
       <div style={{
         flex: 1,
-        padding: '44px 44px',
+        padding: '40px 40px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         minWidth: 260,
-        background: '#fff',
+        background: '#FDF6E3',
       }}>
         {/* Stars */}
         <div style={{ display: 'flex', gap: 4, marginBottom: 20 }}>
           {[...Array(t.stars)].map((_, i) => (
-            <span key={i} style={{ color: 'var(--gold)', fontSize: 20 }}>★</span>
+            <span key={i} style={{ color: '#C9A84C', fontSize: 18 }}>★</span>
           ))}
         </div>
 
         {/* Big quote mark */}
         <div style={{
           fontSize: 72, lineHeight: 0.8,
-          color: t.color, opacity: 0.15,
+          color: '#C9A84C', opacity: 0.3,
           fontFamily: 'Georgia, serif',
           marginBottom: 8,
           userSelect: 'none',
@@ -564,9 +537,9 @@ function SlideCard({
         {/* Review */}
         <p style={{
           fontFamily: 'var(--font-body)',
-          fontSize: 'clamp(14px, 1.5vw, 17px)',
-          color: '#374151',
-          lineHeight: 1.85,
+          fontSize: 'clamp(13px, 1.5vw, 16px)',
+          color: '#3D2B1F',
+          lineHeight: 1.9,
           fontStyle: 'italic',
           margin: 0,
           flex: 1,
@@ -576,25 +549,25 @@ function SlideCard({
 
         {/* Verified badge */}
         <div style={{
-          display: 'flex', alignItems: 'center', gap: 8,
+          display: 'flex', alignItems: 'center', gap: 10,
           marginTop: 28,
           paddingTop: 20,
-          borderTop: '1px solid rgba(0,0,0,0.06)',
+          borderTop: '1px solid rgba(122,79,45,0.15)',
         }}>
           <span style={{
             display: 'inline-flex', alignItems: 'center', gap: 5,
-            background: `${t.color}15`,
-            border: `1px solid ${t.color}30`,
-            borderRadius: 999, padding: '4px 12px',
-            fontSize: 11, color: t.color,
+            background: 'rgba(201,168,76,0.1)',
+            border: '1px solid rgba(201,168,76,0.3)',
+            padding: '4px 12px',
+            fontSize: 10, color: '#7A4F2D',
             fontFamily: 'var(--font-label)', fontWeight: 600,
-            letterSpacing: '0.05em',
+            letterSpacing: '0.08em', textTransform: 'uppercase',
           }}>
-            ✓ Verified StudyEx Graduate
+            ✓ Verified Graduate
           </span>
           <span style={{
-            fontFamily: 'var(--font-label)', fontSize: 11,
-            color: 'var(--gray)', letterSpacing: '0.04em',
+            fontFamily: 'var(--font-label)', fontSize: 10,
+            color: '#6B5B4B', letterSpacing: '0.06em', textTransform: 'uppercase',
           }}>
             via Google Reviews
           </span>

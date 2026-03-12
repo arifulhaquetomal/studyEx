@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { value: 500, suffix: '+', label: 'Students Placed', icon: '🎓' },
-  { value: 50, suffix: '+', label: 'Partner Universities', icon: '🏛' },
-  { value: 10, suffix: '+', label: 'Countries Covered', icon: '🌍' },
-  { value: 95, suffix: '%', label: 'Visa Success Rate', icon: '✅' },
-  { value: 100, suffix: '%', label: 'Satisfaction Rate', icon: '⭐' },
-  { value: 15, suffix: '+', label: 'Years Experience', icon: '🏆' },
+  { value: 500, suffix: '+', label: 'Students Placed', icon: '✦' },
+  { value: 50, suffix: '+', label: 'Partner Universities', icon: '✦' },
+  { value: 10, suffix: '+', label: 'Countries Covered', icon: '✦' },
+  { value: 95, suffix: '%', label: 'Visa Success Rate', icon: '✦' },
+  { value: 100, suffix: '%', label: 'Satisfaction Rate', icon: '✦' },
+  { value: 15, suffix: '+', label: 'Years Experience', icon: '✦' },
 ];
 
 function Counter({ value, suffix, duration = 2000 }: { value: number; suffix: string; duration?: number }) {
@@ -50,7 +50,7 @@ export default function StatsCounter() {
           items?.forEach((item, i) => {
             const el = item as HTMLElement;
             el.style.opacity = '0';
-            el.style.transform = 'translateY(24px)';
+            el.style.transform = 'translateY(20px)';
             setTimeout(() => {
               el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
               el.style.opacity = '1';
@@ -67,8 +67,31 @@ export default function StatsCounter() {
   }, []);
 
   return (
-    <section ref={sectionRef} style={{ background: 'var(--navy)', padding: '80px 0' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }}>
+    <section ref={sectionRef} style={{
+      background: '#1C1007',
+      padding: '72px 0',
+      position: 'relative',
+      borderTop: '1px solid rgba(201,168,76,0.2)',
+      borderBottom: '1px solid rgba(201,168,76,0.2)',
+    }}>
+      {/* Background texture */}
+      <div style={{
+        position: 'absolute', inset: 0,
+        backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(201,168,76,0.03) 80px)',
+        pointerEvents: 'none',
+      }} />
+
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px', position: 'relative' }}>
+        {/* Section title */}
+        <div style={{ textAlign: 'center', marginBottom: 48 }}>
+          <span style={{
+            fontFamily: 'var(--font-label)', fontSize: 10, letterSpacing: '0.22em',
+            color: 'rgba(201,168,76,0.7)', textTransform: 'uppercase', display: 'block',
+          }}>
+            ❧ &nbsp; Our Record &nbsp; ❧
+          </span>
+        </div>
+
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
@@ -80,29 +103,32 @@ export default function StatsCounter() {
               className="stat-item"
               style={{
                 textAlign: 'center',
-                padding: '32px 20px',
-                borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none',
+                padding: '28px 20px',
+                borderRight: i < stats.length - 1 ? '1px solid rgba(201,168,76,0.12)' : 'none',
                 opacity: 0,
               }}
             >
-              <div style={{ fontSize: 28, marginBottom: 8 }}>{stat.icon}</div>
-              <div className="stats-number" style={{ color: '#60A5FA', marginBottom: 8 }}>
+              <div className="stats-number" style={{ color: '#C9A84C', marginBottom: 8, fontStyle: 'italic' }}>
                 <Counter value={stat.value} suffix={stat.suffix} />
               </div>
               <div style={{
                 fontFamily: 'var(--font-label)',
-                fontSize: 13,
+                fontSize: 10,
                 fontWeight: 500,
-                color: 'rgba(255,255,255,0.55)',
+                color: 'rgba(245,237,216,0.4)',
                 textTransform: 'uppercase',
-                letterSpacing: '0.08em',
+                letterSpacing: '0.14em',
               }}>
                 {stat.label}
               </div>
+              {i < stats.length - 1 && (
+                <div style={{ fontSize: 10, color: 'rgba(201,168,76,0.2)', marginTop: 12 }}>✦</div>
+              )}
             </div>
           ))}
         </div>
       </div>
+
       <style>{`
         @media (max-width: 640px) {
           .stats-number { font-size: 40px !important; }

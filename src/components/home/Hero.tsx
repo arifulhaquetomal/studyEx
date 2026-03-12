@@ -1,220 +1,185 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import InteractiveBoxes from './InteractiveBoxes';
 
 const studentCards = [
-  { name: 'Sarah Mitchell',  uni: 'Edinburgh',  country: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', course: 'MSc Data Science',      avatar: 'SM', color: '#0057FF' },
-  { name: 'Mahmudul Hasan',  uni: 'Michigan',   country: '🇺🇸',           course: 'MBA — Full Scholarship', avatar: 'MH', color: '#E8173A' },
-  { name: 'Habib Rahman',    uni: 'Budapest',   country: '🇭🇺',           course: 'MBBS — Medicine',         avatar: 'HR', color: '#F5A623' },
+  { name: 'Sarah Mitchell', uni: 'Edinburgh', country: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', course: 'MSc Data Science', avatar: 'SM', color: '#7A4F2D' },
+  { name: 'Mahmudul Hasan', uni: 'Michigan', country: '🇺🇸', course: 'MBA — Full Scholarship', avatar: 'MH', color: '#6B1A2E' },
+  { name: 'Habib Rahman', uni: 'Budapest', country: '🇭🇺', course: 'MBBS — Medicine', avatar: 'HR', color: '#4A5C44' },
 ];
 
 export default function Hero() {
   const headlineRef = useRef<HTMLDivElement>(null);
-  const cardsRef    = useRef<HTMLDivElement>(null);
-  const eyebrowRef  = useRef<HTMLDivElement>(null);
-  const ctaRef      = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+  const eyebrowRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    /* Staggered entrance for text */
     const els = [eyebrowRef.current, headlineRef.current, ctaRef.current];
     els.forEach((el, i) => {
       if (!el) return;
-      el.style.opacity   = '0';
+      el.style.opacity = '0';
       el.style.transform = 'translateY(30px)';
       setTimeout(() => {
         if (!el) return;
-        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        el.style.opacity    = '1';
-        el.style.transform  = 'translateY(0)';
-      }, 200 + i * 180);
+        el.style.transition = 'opacity 0.9s ease, transform 0.9s ease';
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, 200 + i * 200);
     });
 
-    /* Student cards entrance */
     if (cardsRef.current) {
       const cards = cardsRef.current.querySelectorAll('.hero-student-card');
       cards.forEach((card, i) => {
         const el = card as HTMLElement;
-        el.style.opacity   = '0';
+        el.style.opacity = '0';
         el.style.transform = 'translateY(40px)';
         setTimeout(() => {
           el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-          el.style.opacity    = '1';
-          el.style.transform  = 'translateY(0)';
-        }, 900 + i * 150);
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 900 + i * 180);
       });
     }
   }, []);
 
   return (
-    <section
-      className="hero-bg"
-      style={{ paddingTop: 72, minHeight: '100vh', position: 'relative', overflow: 'hidden' }}
-    >
-      {/* ── Animated background orbs ── */}
-      <div className="hero-orb" style={{ width: 600, height: 600, background: 'rgba(0,87,255,0.13)',  top: '-200px', right: '-100px', animation: 'orb1 18s ease-in-out infinite' }} />
-      <div className="hero-orb" style={{ width: 400, height: 400, background: 'rgba(232,23,58,0.07)', bottom: '-100px', left: '-50px', animation: 'orb2 22s ease-in-out infinite' }} />
-      <div className="hero-orb" style={{ width: 300, height: 300, background: 'rgba(0,87,255,0.09)', top: '40%', left: '20%', animation: 'orb3 16s ease-in-out infinite' }} />
+    <section className="hero-bg" style={{ paddingTop: 72 }}>
+      {/* Vintage warm glow orbs */}
+      <div className="hero-orb" style={{ width: 500, height: 500, background: 'rgba(122, 79, 45, 0.12)', top: '-150px', right: '-80px' }} />
+      <div className="hero-orb" style={{ width: 350, height: 350, background: 'rgba(107, 26, 46, 0.08)', bottom: '-80px', left: '-40px' }} />
 
-      {/* ── Dot grid overlay ── */}
+      {/* Aged paper texture lines */}
       <div style={{
-        position: 'absolute', inset: 0, opacity: 0.06,
-        backgroundImage: 'radial-gradient(rgba(255,255,255,0.7) 1px, transparent 1px)',
-        backgroundSize: '36px 36px',
-        pointerEvents: 'none', zIndex: 1,
+        position: 'absolute', inset: 0, opacity: 1,
+        backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px)',
+        pointerEvents: 'none',
       }} />
 
-      {/* ══════════════════════════════════
-          INTERACTIVE BOXES — full canvas
-      ══════════════════════════════════ */}
-      <InteractiveBoxes />
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '80px 28px', position: 'relative', zIndex: 2, width: '100%' }}>
+        <div style={{ maxWidth: 800 }}>
 
-      {/* ══════════════════════════════════
-          MAIN HERO CONTENT — left side
-      ══════════════════════════════════ */}
-      <div style={{
-        maxWidth: 1280, margin: '0 auto',
-        padding: '100px 28px 80px',
-        position: 'relative', zIndex: 10,
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        minHeight: 'calc(100vh - 72px)',
-      }}>
-        {/* Left content block — constrained so boxes are visible on right */}
-        <div style={{ maxWidth: 580, width: '100%' }}>
-
-          {/* Eyebrow badge */}
-          <div ref={eyebrowRef} style={{ marginBottom: 28 }}>
+          {/* Eyebrow label */}
+          <div ref={eyebrowRef}>
             <span style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-              background: 'rgba(0,87,255,0.15)', border: '1px solid rgba(0,87,255,0.3)',
-              borderRadius: 999, padding: '8px 18px',
-              color: '#60A5FA', fontSize: 12, fontWeight: 600,
-              fontFamily: 'var(--font-label)', letterSpacing: '0.1em', textTransform: 'uppercase',
+              display: 'inline-flex', alignItems: 'center', gap: 10,
+              border: '1px solid rgba(201, 168, 76, 0.3)',
+              padding: '8px 20px',
+              color: '#C9A84C', fontSize: 11, fontWeight: 600,
+              fontFamily: 'var(--font-label)', letterSpacing: '0.18em', textTransform: 'uppercase',
+              marginBottom: 32, background: 'rgba(201, 168, 76, 0.06)',
             }}>
-              <span style={{
-                width: 6, height: 6, background: '#60A5FA', borderRadius: '50%',
-                display: 'inline-block', animation: 'pulse-ring 2s ease-out infinite',
-              }} />
-              Trusted by 500+ Students
+              <span style={{ width: 5, height: 5, background: '#C9A84C', borderRadius: '50%', display: 'inline-block', animation: 'pulse-ring 2.5s ease-out infinite' }} />
+              Trusted by 500+ Students Since 2009
             </span>
           </div>
 
           {/* Headline */}
-          <div ref={headlineRef} style={{ marginBottom: 32 }}>
+          <div ref={headlineRef}>
             <h1 style={{
               fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(38px, 5vw, 70px)',
-              fontWeight: 700, color: '#fff',
-              lineHeight: 1.1, marginBottom: 20,
-              letterSpacing: '-0.02em',
+              fontSize: 'clamp(42px, 6vw, 82px)',
+              fontWeight: 700,
+              color: '#F5EDD8',
+              lineHeight: 1.08,
+              marginBottom: 28,
+              fontStyle: 'italic',
+              letterSpacing: '-0.01em',
             }}>
               Your Global<br />
-              <span style={{ color: '#60A5FA' }}>Education</span>{' '}
+              <span style={{ color: '#C9A84C' }}>Education</span>{' '}
               Starts Here.
             </h1>
+            {/* Ornamental rule under headline */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 28 }}>
+              <div style={{ flex: 1, maxWidth: 80, height: 1, background: 'rgba(201,168,76,0.4)' }} />
+              <span style={{ color: 'rgba(201,168,76,0.6)', fontSize: 14 }}>✦</span>
+              <div style={{ width: 24, height: 1, background: 'rgba(201,168,76,0.25)' }} />
+            </div>
             <p style={{
-              fontSize: 'clamp(15px, 1.8vw, 18px)',
-              color: 'rgba(255,255,255,0.72)',
-              lineHeight: 1.8, maxWidth: 480,
+              fontSize: 'clamp(16px, 2vw, 19px)',
+              color: 'rgba(245, 237, 216, 0.68)',
+              lineHeight: 1.85,
+              maxWidth: 540,
+              marginBottom: 40,
+              fontStyle: 'italic',
             }}>
               From Dhaka to Edinburgh. From Sylhet to Toronto.{' '}
-              <strong style={{ color: 'rgba(255,255,255,0.95)' }}>We get you there.</strong>{' '}
+              <strong style={{ color: 'rgba(245,237,216,0.92)', fontWeight: 600 }}>We get you there.</strong>{' '}
               Expert guidance for university applications, scholarships & visas.
             </p>
           </div>
 
           {/* CTAs */}
-          <div ref={ctaRef} style={{ display: 'flex', flexWrap: 'wrap', gap: 16, marginBottom: 52 }}>
-            <Link to="/apply" className="btn btn-red" style={{ fontSize: 16, padding: '15px 30px' }}>
-              Book Free Consultation →
+          <div ref={ctaRef} style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+            <Link to="/apply" className="btn btn-red" style={{ fontSize: 12, padding: '14px 32px' }}>
+              Book Free Consultation
             </Link>
-            <Link to="/about" className="btn btn-ghost" style={{ fontSize: 16, padding: '15px 30px' }}>
+            <Link to="/about" className="btn btn-ghost" style={{ fontSize: 12, padding: '14px 32px' }}>
               See Success Stories
             </Link>
           </div>
 
-          {/* Trust bar */}
-          <div style={{
-            display: 'flex', flexWrap: 'wrap', gap: 32,
-            paddingTop: 28, borderTop: '1px solid rgba(255,255,255,0.1)',
-          }}>
+          {/* Trust stats */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 40, marginTop: 56, paddingTop: 36, borderTop: '1px solid rgba(201,168,76,0.15)' }}>
             {[
               { num: '500+', label: 'Students Placed' },
               { num: '100%', label: 'Visa Success' },
-              { num: '50+',  label: 'Partner Universities' },
-              { num: '15+',  label: 'Years Experience' },
+              { num: '50+', label: 'Partner Universities' },
+              { num: '15+', label: 'Years Experience' },
             ].map(stat => (
               <div key={stat.label}>
-                <div style={{ fontSize: 26, fontWeight: 700, fontFamily: 'var(--font-heading)', color: '#fff' }}>
-                  {stat.num}
-                </div>
-                <div style={{
-                  fontSize: 10, color: 'rgba(255,255,255,0.45)',
-                  fontFamily: 'var(--font-label)', textTransform: 'uppercase', letterSpacing: '0.08em',
-                }}>
-                  {stat.label}
-                </div>
+                <div style={{ fontSize: 28, fontWeight: 700, fontFamily: 'var(--font-heading)', color: '#C9A84C', fontStyle: 'italic' }}>{stat.num}</div>
+                <div style={{ fontSize: 10, color: 'rgba(245,237,216,0.45)', fontFamily: 'var(--font-label)', textTransform: 'uppercase', letterSpacing: '0.12em', marginTop: 4 }}>{stat.label}</div>
               </div>
             ))}
           </div>
-
-          {/* Hint for interactivity */}
-          <div style={{
-            marginTop: 36,
-            display: 'flex', alignItems: 'center', gap: 8,
-            color: 'rgba(255,255,255,0.3)', fontSize: 12,
-            fontFamily: 'var(--font-label)',
-          }}>
-            <span style={{ fontSize: 16 }}>🖱</span>
-            <span style={{ letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-              Move your cursor · Click the boxes
-            </span>
-          </div>
         </div>
 
-        {/* Student cards row — bottom left */}
+        {/* Student testimonial cards */}
         <div ref={cardsRef} style={{
-          display: 'flex', flexWrap: 'wrap', gap: 14,
-          position: 'absolute', bottom: 48, left: 28, zIndex: 12,
+          display: 'flex', flexWrap: 'wrap', gap: 14, marginTop: 56,
         }}>
           {studentCards.map(card => (
             <div
               key={card.name}
               className="hero-student-card"
               style={{
-                background: 'rgba(255,255,255,0.07)',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)',
-                border: '1px solid rgba(255,255,255,0.12)',
-                borderRadius: 14, padding: '12px 18px',
-                display: 'flex', alignItems: 'center', gap: 12,
-                minWidth: 185,
+                background: 'rgba(240,224,190,0.06)',
+                border: '1px solid rgba(201, 168, 76, 0.2)',
+                padding: '16px 20px',
+                display: 'flex', alignItems: 'center', gap: 14,
+                minWidth: 220,
+                flex: '1 1 200px',
+                maxWidth: 280,
               }}
             >
               <div style={{
-                width: 40, height: 40, borderRadius: '50%',
+                width: 44, height: 44,
                 background: card.color,
+                border: '1px solid rgba(201, 168, 76, 0.3)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontWeight: 700, color: '#fff', fontSize: 13, flexShrink: 0,
+                fontWeight: 700, color: '#F5EDD8', fontSize: 14, flexShrink: 0,
+                fontFamily: 'var(--font-heading)', fontStyle: 'italic',
               }}>
                 {card.avatar}
               </div>
               <div>
-                <p style={{ fontWeight: 600, color: '#fff', fontSize: 13 }}>{card.name}</p>
-                <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 11 }}>{card.country} {card.uni}</p>
-                <p style={{ color: 'var(--gold)', fontSize: 10, marginTop: 2 }}>{card.course}</p>
+                <p style={{ fontWeight: 600, color: '#F5EDD8', fontSize: 13, fontFamily: 'var(--font-heading)', fontStyle: 'italic' }}>{card.name}</p>
+                <p style={{ color: 'rgba(245,237,216,0.55)', fontSize: 11, marginTop: 2 }}>
+                  {card.country} {card.uni}
+                </p>
+                <p style={{ color: '#C9A84C', fontSize: 10, marginTop: 3, fontFamily: 'var(--font-label)', letterSpacing: '0.08em' }}>{card.course}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Bottom fade to next section */}
+      {/* Bottom fade to parchment */}
       <div style={{
-        position: 'absolute', bottom: 0, left: 0, right: 0, height: 100,
-        background: 'linear-gradient(to bottom, transparent, #F8F9FC)',
-        pointerEvents: 'none', zIndex: 15,
+        position: 'absolute', bottom: 0, left: 0, right: 0, height: 140,
+        background: 'linear-gradient(to bottom, transparent, #FDF6E3)',
+        pointerEvents: 'none',
       }} />
     </section>
   );
